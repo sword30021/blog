@@ -3,18 +3,30 @@
 <head>
     <meta charset="utf-8">
     
-    <title>标签：: Android_EditText | 自由的程序员</title>
+    <title>Android-使用Intent打开各种文件 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="IT技术学习和记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="自由的程序员">
-<meta property="og:url" content="https://sword30021.github.io/blog/tags/Android-EditText/index.html">
+        <meta name="keywords" content="Android,Android_Intent" />
+    
+    <meta name="description" content="1、打开Html文件
+
+public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android-使用Intent打开各种文件">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-使用Intent打开各种文件/index.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="IT技术学习和记录">
+<meta property="og:description" content="1、打开Html文件
+
+public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
+<meta property="og:updated_time" content="2016-09-22T07:55:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自由的程序员">
-<meta name="twitter:description" content="IT技术学习和记录">
+<meta name="twitter:title" content="Android-使用Intent打开各种文件">
+<meta name="twitter:description" content="1、打开Html文件
+
+public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
     
 
     
@@ -123,88 +135,229 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>Android_EditText</em>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/Android知识/">Android知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/Android知识/Android-Intent/">Android_Intent</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Android-使用Intent打开各种文件" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog/2016/09/22/Android-EditText属性大全/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-EditText属性大全/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/Android知识/">Android知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T07:40:52.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-EditText属性大全/">Android-EditText属性大全</a>
+        Android-使用Intent打开各种文件
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/" class="article-date">
+    <time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-Intent/">Android_Intent</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p>1、打开Html文件</p>
+</blockquote>
+<pre><code>public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&quot;).encodedPath(param ).build();    
+     Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);   
+     intent.setDataAndType(uri, &quot;text/html&quot;);    
+     return intent;  
+}
+</code></pre><blockquote>
+<p>2、打开图片文件</p>
+</blockquote>
+<pre><code>public static Intent getImageFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;image/*&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>3、打开pdf文件</p>
+</blockquote>
+<pre><code>public static Intent getPdfFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/pdf&quot;);    
+    return intent; 
+}
+</code></pre><blockquote>
+<p>4、打开txt文件</p>
+</blockquote>
+<pre><code>public static Intent getTextFileIntent( String paramString, boolean paramBoolean) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    if (paramBoolean) {      
+        Uri uri1 = Uri.parse(param );      
+        intent.setDataAndType(uri1, &quot;text/plain&quot;);    
+    }   
+    while (true) {      
+        return intent;      
+        Uri uri2 = Uri.fromFile(new File(param ));     
+        intent.setDataAndType(uri2, &quot;text/plain&quot;);    
+    }  
+}
+</code></pre><blockquote>
+<p>5、打开音频文件</p>
+</blockquote>
+<pre><code>public static Intent getAudioFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    
+    intent.putExtra(&quot;oneshot&quot;, 0);    
+    intent.putExtra(&quot;configchange&quot;, 0);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;audio/*&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>6、打开视频文件</p>
+</blockquote>
+<pre><code>public static Intent getVideoFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    
+    intent.putExtra(&quot;oneshot&quot;, 0);    
+    intent.putExtra(&quot;configchange&quot;, 0);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;video/*&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>7、打开chm文件</p>
+</blockquote>
+<pre><code>public static Intent getChmFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/x-chm&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>8、打开word文件</p>
+</blockquote>
+<pre><code>public static Intent getWordFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/msword&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>9、打开Excel文件</p>
+</blockquote>
+<pre><code>public static Intent getExcelFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/vnd.ms-excel&quot;);    
+    return intent;  
+</code></pre><p>}</p>
+<p>10、打开ppt文件</p>
+<pre><code>public static Intent getPptFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/vnd.ms-powerpoint&quot;);    
+    return intent;  
+}
+</code></pre>
+        </div>
+        <footer class="article-footer">
             
-EditText继承关系：View–&gt;TextView–&gt;EditText
 
-EditText的属性很多，这里介绍几个：
 
-android:hint=”请输入数字！”
 
-设置显示在空间上的提示信息
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-使用Intent打开各种文件/" data-id="cite1nnxy0004jg19806vi1ff" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
 
-android:numeric=”integer”
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
 
-设置只能输入整数，如果是小数则是：decimal
+            if ($('#' + id).length) {
+                box = $('#' + id);
 
-android:singleLine=”true”
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
 
-设置单行输入，一旦设置为t
-        </p>
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -264,6 +417,19 @@ android:singleLine=”true”
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/2016/09/22/Android-EditText属性大全/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Android-EditText属性大全</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -421,11 +587,13 @@ android:singleLine=”true”
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Android-使用Intent打开各种文件/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
