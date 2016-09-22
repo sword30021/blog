@@ -9,8 +9,8 @@
         <meta name="keywords" content="Android" />
     
     <meta name="description" content="res/raw和assets的相同点
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 
+两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 res/raw和assets的不同点
 
 
@@ -21,19 +21,19 @@ res/raw文件下不可以新">
 <meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/index.html">
 <meta property="og:site_name" content="自由的程序员">
 <meta property="og:description" content="res/raw和assets的相同点
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 
+两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 res/raw和assets的不同点
 
 
 res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
 res/raw文件下不可以新">
-<meta property="og:updated_time" content="2016-09-22T07:25:53.000Z">
+<meta property="og:updated_time" content="2016-09-22T07:30:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android-res/raw/assets存放资源的限制和读取方式">
 <meta name="twitter:description" content="res/raw和assets的相同点
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 
+两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 res/raw和assets的不同点
 
 
@@ -176,18 +176,17 @@ res/raw文件下不可以新">
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><span bgcolor="#7FFFD4">res/raw和assets的相同点<span></span></span></p>
+            <table><tr><td bgcolor="#f0f0f0"><br>res/raw和assets的相同点<br></td></tr></table>
+
 <p>两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。</p>
-<blockquote>
-<p>res/raw和assets的不同点</p>
-</blockquote>
+<table><tr><td bgcolor="#f0f0f0"><br>res/raw和assets的不同点<br></td></tr></table>
+
 <ol>
 <li>res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。</li>
 <li>res/raw文件下不可以新建目录结构，而assets则可以自定义目录结构，也就是assets目录下可以再建立文件夹。</li>
 </ol>
-<blockquote>
-<p>读取文件资源</p>
-</blockquote>
+<table><tr><td bgcolor="#f0f0f0"><br>读取文件资源<br></td></tr></table>
+
 <p>1.读取res/raw下的文件资源，通过以下方式获取输入流来进行写操作:</p>
 <pre><code>InputStream is = getResources().openRawResource(R.id.filename); 
 </code></pre><p>2.读取assets下的文件资源，通过以下方式获取输入流来进行写操作:</p>
@@ -196,9 +195,8 @@ am = getAssets();
 InputStream is = am.open(&quot;filename&quot;);
 </code></pre><p>3.获取assets下的文件列表</p>
 <pre><code>String[] files = getAssets().list(&quot;&quot;);
-</code></pre><blockquote>
-<p>Android 对asset与raw的限制</p>
-</blockquote>
+</code></pre><table><tr><td bgcolor="#f0f0f0"><br>Android 对asset与raw的限制<br></td></tr></table>
+
 <p>在读取这两个资源文件夹中的文件时会有一定的限制，即单个文件大小不能超过1M ，如果读取超过1M的文件会报 “Data exceeds UNCOMPRESS_DATA_MAX (1314625 vs 1048576)” 的IOException。</p>
 
         </div>
@@ -207,7 +205,7 @@ InputStream is = am.open(&quot;filename&quot;);
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/" data-id="cite0lgui0000mn196vnpbire" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/" data-id="cite0rb480000sb19tljcye69" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
