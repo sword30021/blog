@@ -3,18 +3,39 @@
 <head>
     <meta charset="utf-8">
     
-    <title>分类：: 开发知识 | 自由的程序员</title>
+    <title>css-如何规定某一元素高度等于其宽度 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="IT技术学习和记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="自由的程序员">
-<meta property="og:url" content="https://sword30021.github.io/blog/categories/Android/开发知识/index.html">
+        <meta name="keywords" content="Web,Css" />
+    
+    <meta name="description" content="使用js实现
+
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    $(document).ready(function(){
+    $(&amp;apos;#box1&amp;apos;).css(&amp;apos;height&amp;apos;,$(&amp;apos;#box1&amp;apos;).css(&amp;apos;width&amp;apos;));
+})
+&amp;lt;/script&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-如何规定某一元素高度等于其宽度">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/css-如何规定某一元素高度等于其宽度/index.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="IT技术学习和记录">
+<meta property="og:description" content="使用js实现
+
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    $(document).ready(function(){
+    $(&amp;apos;#box1&amp;apos;).css(&amp;apos;height&amp;apos;,$(&amp;apos;#box1&amp;apos;).css(&amp;apos;width&amp;apos;));
+})
+&amp;lt;/script&amp;">
+<meta property="og:updated_time" content="2016-09-22T08:22:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自由的程序员">
-<meta name="twitter:description" content="IT技术学习和记录">
+<meta name="twitter:title" content="css-如何规定某一元素高度等于其宽度">
+<meta name="twitter:description" content="使用js实现
+
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    $(document).ready(function(){
+    $(&amp;apos;#box1&amp;apos;).css(&amp;apos;height&amp;apos;,$(&amp;apos;#box1&amp;apos;).css(&amp;apos;width&amp;apos;));
+})
+&amp;lt;/script&amp;">
     
 
     
@@ -123,196 +144,142 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">开发知识</em>
+    <a class="page-title-link" href="/blog/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Web/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Web/开发知识/Css/">Css</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
+                            <article id="post-css-如何规定某一元素高度等于其宽度" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        css-如何规定某一元素高度等于其宽度
+        </h1>
+    
 
-    
-    
+            </header>
         
         
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            <div class="article-subtitle">
+                <a href="/blog/2016/09/22/css-如何规定某一元素高度等于其宽度/" class="article-date">
+    <time datetime="2016-09-22T08:19:48.000Z" itemprop="datePublished">2016-09-22</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Css/">Css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Web/">Web</a></li></ul>
+
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-使用Intent打开各种文件/">0</span>
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p>使用js实现</p>
+</blockquote>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function(){
+    $(&apos;#box1&apos;).css(&apos;height&apos;,$(&apos;#box1&apos;).css(&apos;width&apos;));
+})
+&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+#box{
+    width: 900px;
+    height: 400px;
+    border:1px solid red;
+}
+#box1{
+    width:50%;
+    border:1px solid green;
+}
+&lt;/style&gt;
+&lt;body&gt;
+&lt;div id=&apos;box&apos;&gt;
+&lt;div id=&apos;box1&apos;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre><blockquote>
+<p>Ps:如果还有其他实现方式，请留言，谢谢。</p>
+</blockquote>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time></p>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/">Android-使用Intent打开各种文件</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
+        <footer class="article-footer">
             
-1、打开Html文件
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&q
-        </p>
+
+
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/css-如何规定某一元素高度等于其宽度/" data-id="cite2o9yy000yz619iyxaw2nv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog/2016/09/22/Android-EditText属性大全/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-EditText属性大全/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T07:40:52.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-EditText属性大全/">Android-EditText属性大全</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-EditText继承关系：View–&gt;TextView–&gt;EditText
-
-EditText的属性很多，这里介绍几个：
-
-android:hint=”请输入数字！”
-
-设置显示在空间上的提示信息
-
-android:numeric=”integer”
-
-设置只能输入整数，如果是小数则是：decimal
-
-android:singleLine=”true”
-
-设置单行输入，一旦设置为t
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
     
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T06:15:02.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/">Android-res/raw/assets存放资源的限制和读取方式</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-res/raw和assets的相同点
-
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
-
-res/raw和assets的不同点
-
-
-res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
-res/raw文件下不可
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
-
-
+    </section>
 
                         </div>
                     </section>
@@ -372,6 +339,19 @@ res/raw文件下不可
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/2016/09/22/Android-Studio常用插件列表-持续更新/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Android Studio常用插件列表(持续更新...)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -569,11 +549,13 @@ res/raw文件下不可
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/css-如何规定某一元素高度等于其宽度/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
