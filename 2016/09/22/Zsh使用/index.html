@@ -1,14 +1,90 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
 <head>
-    <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <title>Zsh使用 | 自由的程序员</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Mac" />
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-    <meta name="description" content="使用默认指令列模式(bash shell)的管理员可能想仔细看看zshell或是zsh。由于它于bash相似，功能又有所加强，zsh在Linux社区获得了关注。那么zsh有什么不同之处呢?首先，zsh在感觉和功能上都和bash相似。但是一些增强功能让zsh变成一个有趣的选择。Zsh增强功能：标签完成和拼写错误修正
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/blog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Mac," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="使用默认指令列模式(bash shell)的管理员可能想仔细看看zshell或是zsh。由于它于bash相似，功能又有所加强，zsh在Linux社区获得了关注。那么zsh有什么不同之处呢?首先，zsh在感觉和功能上都和bash相似。但是一些增强功能让zsh变成一个有趣的选择。Zsh增强功能：标签完成和拼写错误修正
 用过bash标签完成的管理员会发现zsh中的增加功能令人印象深刻。这些功能包括菜单中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Zsh使用">
@@ -21,144 +97,220 @@
 <meta name="twitter:title" content="Zsh使用">
 <meta name="twitter:description" content="使用默认指令列模式(bash shell)的管理员可能想仔细看看zshell或是zsh。由于它于bash相似，功能又有所加强，zsh在Linux社区获得了关注。那么zsh有什么不同之处呢?首先，zsh在感觉和功能上都和bash相似。但是一些增强功能让zsh变成一个有趣的选择。Zsh增强功能：标签完成和拼写错误修正
 用过bash标签完成的管理员会发现zsh中的增加功能令人印象深刻。这些功能包括菜单中">
-    
 
-    
-        <link rel="alternate" href="/" title="自由的程序员" type="application/atom+xml" />
-    
 
-    
 
-    <link rel="stylesheet" href="/blog/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/blog/vendor/titillium-web/styles.css">
-    <link rel="stylesheet" href="/blog/vendor/source-code-pro/styles.css">
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
 
-    <link rel="stylesheet" href="/blog/css/style.css">
 
-    <script src="/blog/vendor/jquery/2.0.3/jquery.min.js"></script>
-    
-    
-        <link rel="stylesheet" href="/blog/vendor/lightgallery/css/lightgallery.min.css">
-    
-    
-    
 
+
+  <link rel="canonical" href="https://sword30021.github.io/blog/2016/09/22/Zsh使用/"/>
+
+  <title> Zsh使用 | 自由的程序员 </title>
 </head>
 
-<body>
-    <div id="wrap">
-        <header id="header">
-    <div id="header-outer" class="outer">
-        <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
-                    <h1 class="logo-wrap">
-                        <a href="/blog/" class="logo"></a>
-                    </h1>
-                    
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">生活是一场马拉松，学习亦是如此</p>
-                        </h2>
-                    
-                </div>
-                <div id="header-inner" class="nav-container">
-                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-                    <div class="nav-container-inner">
-                        <ul id="main-nav">
-                            
-                                <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/blog/">主页</a>
-                                </li>
-                            
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/">Android</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/开发工具/">开发工具</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/开发知识/">开发知识</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Mac/">Mac</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/开发工具/">开发工具</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/开发知识/">开发知识</a></li></ul></li></ul>
-                                    
-                                <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/blog/about/index.html">关于</a>
-                                </li>
-                            
-                        </ul>
-                        <nav id="sub-nav">
-                            <div id="search-form-wrap">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
-        },
-        ROOT_URL: '/blog/',
-        CONTENT_URL: '/blog/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/blog/js/insight.js"></script>
+  
 
-</div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-        <div class="container">
-            <div class="main-body container-inner">
-                <div class="main-body-inner">
-                    <section id="main">
-                        <div class="main-body-header">
-    <h1 class="header">
+
+
+
+
+
+
+
+
+
+  
+  
     
-    <a class="page-title-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a>
-    </h1>
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/blog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">自由的程序员</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">生活是一场马拉松，学习亦是如此</p>
 </div>
-                        <div class="main-body-content">
-                            <article id="post-Zsh使用" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-            <header class="article-header">
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Zsh使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-22T16:37:23+08:00" content="2016-09-22">
+              2016-09-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/blog/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
                 
-    
-        <h1 class="article-title" itemprop="name">
-        Zsh使用
-        </h1>
-    
-
-            </header>
-        
-        
-            <div class="article-subtitle">
-                <a href="/blog/2016/09/22/Zsh使用/" class="article-date">
-    <time datetime="2016-09-22T08:37:23.000Z" itemprop="datePublished">2016-09-22</time>
-</a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Mac/">Mac</a></li></ul>
+                  , 
+                
 
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p>使用默认指令列模式(bash shell)的管理员可能想仔细看看zshell或是zsh。由于它于bash相似，功能又有所加强，zsh在Linux社区获得了关注。<br>那么zsh有什么不同之处呢?首先，zsh在感觉和功能上都和bash相似。但是一些增强功能让zsh变成一个有趣的选择。<br><strong><strong>Zsh增强功能：标签完成和拼写错误修正</strong></strong></p>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/blog/categories/Mac/Mac使用/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac使用</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>使用默认指令列模式(bash shell)的管理员可能想仔细看看zshell或是zsh。由于它于bash相似，功能又有所加强，zsh在Linux社区获得了关注。<br>那么zsh有什么不同之处呢?首先，zsh在感觉和功能上都和bash相似。但是一些增强功能让zsh变成一个有趣的选择。<br><strong><strong>Zsh增强功能：标签完成和拼写错误修正</strong></strong></p>
 <p>用过bash标签完成的管理员会发现zsh中的增加功能令人印象深刻。这些功能包括菜单中现有的自动完成命令选项，该菜单可以通过使用箭头键滚动。举例来说，键入以下命令将提供可能命令行标记的列表：<br>$ ls -或是<br>$ rm -选择要取消的特定程序，程序列表就和取消命令一起可用了。<br>另一个功能在内置页面程序中，它提供到less命令的快捷方式。要访问它，输入：<br>$ 这和在命令行上运行more文件名一样。<br>对笨拙的打字员来说，拼写错误修正功能可用了。例如，如果你输入了一条错误命令，zsh会提示修正：<br>$ lls<strong>zsh: 要将 ‘lls’修改为 ‘ls’ [nyae]吗?</strong><br>要修改它，输入y，命令就更正为ls，接着命令就准备运行了。<br>其它选项也很实用。输入n拒绝命令修正，输入a中断命令，输入e跳转到命令行进行编辑。这个自动修正功能也能用于命令行标记和文件名，包括修改无效Git分支名称一类的机密事务。<br><strong>开始使用zsh</strong></p>
 <p>为了快速地开始使用zsh，可利用Robby Russell收集的zsh主题、功能和工具，它们被预先打包成“Oh My Zsh”。<br>$ wget –no-check-certificate <a href="https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh" target="_blank" rel="external">https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh</a> -O - | sh<br>还可以手工安装这个工具包。如果您在运行另一种 shell，只是想试试 Z shell，那么手工安装可能会更好。请使用 Git 复制这个工具包，然后运行 zsh：<br>$ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh<br>$ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshr<br>c$ zsh<br>OMZ! 的默认主题称为 “robbyrussell”，由 OMZ! 的管理者命名。您可以将它更改为 ~/.oh-my-zsh/themes 中列出的任何主题。更改主题的方法是，打开 ~/.zshrc 文件，将 ZSH_THEME 变量设置为主题文件的基本名称。例如，要想使用 cloud.zsh-theme，则应该设置 ZSH_THEME=cloud。您可能会注意到，许多主题的输出状态信息显示在提示符中和<em>提示符的最右边</em>。 例如，Clean 主题在最右边输出当前时间。与硬件屏幕不同，屏幕模拟器的底部通常没有状态条，但是可以使用提示符右边的区域提供动态反馈。还记得可以在提示符中使用 \e[ 编码设置颜色吗？有一组这样的 “转义” 可以将光标移动到窗口中的不同位置。另外，目前的 UNIX 系统并没有使用神秘的符号和数字，而是使用 tput 按名称或用途查找和产生转义。Z shell 使用这种方法提供 RPS1 和 RPS2，它们分别表示初始行和后续行右边的提示符。<br>除了通过主题控制颜色和提示符之外，OMZ! 还提供了一些插件，这些插件将同类的函数和特性集中在一起。例如，如果您使用 Git 进行源代码控制，可以启用 Git OMZ! 插件，它会在提示符中增加 Git 状态。请打开 ~/.zshrc 文件，然后编辑插件行，在其中包含 git&gt;。现在，当切换到一个 Git 存储库时，提示符会反映该状态。(<a href="http://www.ibm.com/developerworks/cn/aix/library/au-spunix_shellmakeover/" target="_blank" rel="external">极限shell改造</a>)“Oh My Zsh”知识库包含一个主题和功能集合用于现有zsh环境的建立和改变。它也能和卸载脚本一起用来简化移除：<br>$ uninstall_oh_my_zsh<br>与zsh shell一起供给的还有一些很好的文档和zsh参考卡。GitHub等网站上的在线资源是.zshrc文件的例子，它相当于zsh版的.bashrc文件，这些资源同时也提供如何定制zsh的示例或是示范加强命令行经验的炫酷技巧。<br>一些zsh功能可和bash一起用，但在bash上设置、配置更加复杂，这也解释了为什么人们有多页.bashrc文件。如果是Shell的高度使用者，zsh会是吸引你用来取代bash的选择。它的使用快速且简单，而它的一些重要功能也让与shell的互动更有趣。<br><strong>非常好用的特性</strong><br>   加强的 alias，在bash里如果你用 alias，新名不用有补全功能了，所以alias功能有限，几次想用它简化软件包管理都放弃了。而zsh里的alias生成的新名同样支持选项补全，就样就可以很放心地 alias ai=”sudo apt-get install” 等了，再也不用频繁输入长命令了。     zsh可以方便里使用快捷键，例如可以实现按两下[esc]，在命令之前加加sudo,按[esc][h]，显示man，等等。 zsh可以对单个命令的补全进行设置，使常用命令高效。例如 kill [tab] 就可以选择所有进程。    zsh的命令提示符设置更灵活。     zsh对目录的操作特别灵活。     zsh对重定向，管道等提供更多功能。<br><strong>配置</strong></p>
 <pre><code>#color{{{
@@ -437,338 +589,289 @@ alias qq=&quot;nohup google-chrome --no-proxy-server --  app=http://web.qq.com &
 alias gmusic=&quot;google-chrome --no-proxy-server --  app=http://g.top100.cn/12174704/html/player.html#loaded&quot;
 alias apa=&quot;dpkg -l |grep ^rc|awk &apos;{print $2}&apos; |sudo xargs dpkg -P&quot;
 </code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/Mac/" rel="tag">#Mac</a>
+          
         </div>
-        <footer class="article-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2016/09/22/Mac上如何完全删除node-js/" rel="next" title="Mac上如何完全删除node.js">
+                <i class="fa fa-chevron-left"></i> Mac上如何完全删除node.js
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/09/22/Mac上设置Java环境变量/" rel="prev" title="Mac上设置Java环境变量">
+                Mac上设置Java环境变量 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Zsh使用/" data-id="citjs22sf000fd2fymtmxjqzx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
 
-            if ($('#' + id).length) {
-                box = $('#' + id);
+          </div>
+          
 
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
 
-              box = $(html);
+          
+  <div class="comments" id="comments">
+    
+  </div>
 
-              $('body').append(box);
-            }
 
-            $('.article-share-box.on').hide();
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
 
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
 
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
+      
 
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/blog/images/avatar.gif"
+               alt="妞妞骑毛驴" />
+          <p class="site-author-name" itemprop="name">妞妞骑毛驴</p>
+          <p class="site-description motion-element" itemprop="description">IT技术学习和记录</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/blog/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/blog/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">妞妞骑毛驴</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-        </footer>
-    </div>
-</article>
-
-    <section id="comments">
-    
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
-    
-    </section>
-
-                        </div>
-                    </section>
-                    <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p>关注我 :</p>
-        <ul class="social-links">
-            
-                
-                <li>
-                    <a class="social-tooltip" title="twitter" href="/blog/" target="_blank">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="facebook" href="/blog/" target="_blank">
-                        <i class="icon fa fa-facebook"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="google-plus" href="/blog/" target="_blank">
-                        <i class="icon fa fa-google-plus"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="weibo" href="/blog/" target="_blank">
-                        <i class="icon fa fa-weibo"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="rss" href="/blog/" target="_blank">
-                        <i class="icon fa fa-rss"></i>
-                    </a>
-                </li>
-                
-            
-        </ul>
-    </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/blog/2016/09/22/Mac上设置Java环境变量/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            Mac上设置Java环境变量
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/blog/2016/09/22/Mac上如何完全删除node-js/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Mac上如何完全删除node.js</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
-    
-    <div class="widgets-container">
-        
-            
-                
-    <div class="widget-wrap">
-        <h3 class="widget-title">最新文章</h3>
-        <div class="widget">
-            <ul id="recent-post" class="no-thumbnail">
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></p>
-                            <p class="item-title"><a href="/blog/2016/09/22/Mac上安装oh-my-zsh/" class="title">Mac上安装oh-my-zsh</a></p>
-                            <p class="item-date"><time datetime="2016-09-22T08:43:20.000Z" itemprop="datePublished">2016-09-22</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></p>
-                            <p class="item-title"><a href="/blog/2016/09/22/Mac上设置Java环境变量/" class="title">Mac上设置Java环境变量</a></p>
-                            <p class="item-date"><time datetime="2016-09-22T08:40:09.000Z" itemprop="datePublished">2016-09-22</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></p>
-                            <p class="item-title"><a href="/blog/2016/09/22/Zsh使用/" class="title">Zsh使用</a></p>
-                            <p class="item-date"><time datetime="2016-09-22T08:37:23.000Z" itemprop="datePublished">2016-09-22</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></p>
-                            <p class="item-title"><a href="/blog/2016/09/22/Mac上如何完全删除node-js/" class="title">Mac上如何完全删除node.js</a></p>
-                            <p class="item-date"><time datetime="2016-09-22T08:35:47.000Z" itemprop="datePublished">2016-09-22</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></p>
-                            <p class="item-title"><a href="/blog/2016/09/22/Mac上安装Homebrew及常用命令/" class="title">Mac上安装Homebrew及常用命令</a></p>
-                            <p class="item-date"><time datetime="2016-09-22T08:33:08.000Z" itemprop="datePublished">2016-09-22</time></p>
-                        </div>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">分类</h3>
-        <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/">Android</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发工具/">开发工具</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发工具/Android-Studio/">Android Studio</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/">开发知识</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/Android控件/">Android控件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/Other/">Other</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/">Mac</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发工具/">开发工具</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发工具/Atom/">Atom</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发知识/">开发知识</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发知识/Css/">Css</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">归档</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">九月 2016</a><span class="archive-list-count">11</span></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">标签</h3>
-        <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-EditText/">Android_EditText</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-Intent/">Android_Intent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-Resource/">Android_Resource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-tools/">Android_tools</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Css/">Css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mac/">Mac</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web/">Web</a><span class="tag-list-count">2</span></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-float">
-        <h3 class="widget-title">标签云</h3>
-        <div class="widget tagcloud">
-            <a href="/blog/tags/Android/" style="font-size: 16.67px;">Android</a> <a href="/blog/tags/Android-EditText/" style="font-size: 10px;">Android_EditText</a> <a href="/blog/tags/Android-Intent/" style="font-size: 10px;">Android_Intent</a> <a href="/blog/tags/Android-Resource/" style="font-size: 10px;">Android_Resource</a> <a href="/blog/tags/Android-tools/" style="font-size: 10px;">Android_tools</a> <a href="/blog/tags/Atom/" style="font-size: 10px;">Atom</a> <a href="/blog/tags/Css/" style="font-size: 10px;">Css</a> <a href="/blog/tags/Mac/" style="font-size: 20px;">Mac</a> <a href="/blog/tags/Web/" style="font-size: 13.33px;">Web</a>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">链接</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-</aside>
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/blog/" class="logo"></a>
-                </h1>
-                <p>&copy; 2016 妞妞骑毛驴</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-        
-    
-    <script>
-    var disqus_shortname = 'hexo-theme-hueman';
-    
-    
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Zsh使用/';
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
 
 
 
-    
-        <script src="/blog/vendor/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-share.min.js"></script>
-        <script src="/blog/vendor/lightgallery/js/lg-video.min.js"></script>
-    
 
 
-<!-- Custom Scripts -->
-<script src="/blog/js/main.js"></script>
 
-    </div>
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/blog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/blog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/blog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/blog/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
