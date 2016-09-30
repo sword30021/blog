@@ -3,18 +3,39 @@
 <head>
     <meta charset="utf-8">
     
-    <title>标签：: Android_Intent | 自由的程序员</title>
+    <title>Android Studio配置正式签名和debug签名 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="IT技术学习和记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="自由的程序员">
-<meta property="og:url" content="https://sword30021.github.io/blog/tags/Android-Intent/index.html">
+        <meta name="keywords" content="Android,Android_tools" />
+    
+    <meta name="description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
+
+在主工程(一般都是app)下的build.gradle里，配置2个签名：
+signingConfigs {  
+    release {  
+    keyAlias &amp;apos;###&amp;apos;  
+    key">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Studio配置正式签名和debug签名">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/30/Android-Studio配置正式签名和debug签名/index.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="IT技术学习和记录">
+<meta property="og:description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
+
+在主工程(一般都是app)下的build.gradle里，配置2个签名：
+signingConfigs {  
+    release {  
+    keyAlias &amp;apos;###&amp;apos;  
+    key">
+<meta property="og:updated_time" content="2016-09-30T09:19:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自由的程序员">
-<meta name="twitter:description" content="IT技术学习和记录">
+<meta name="twitter:title" content="Android Studio配置正式签名和debug签名">
+<meta name="twitter:description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
+
+在主工程(一般都是app)下的build.gradle里，配置2个签名：
+signingConfigs {  
+    release {  
+    keyAlias &amp;apos;###&amp;apos;  
+    key">
     
 
     
@@ -123,59 +144,153 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>Android_Intent</em>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/">开发工具</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/Android-Studio/">Android Studio</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Android-Studio配置正式签名和debug签名" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/">Android-使用Intent打开各种文件</a>
+        Android Studio配置正式签名和debug签名
         </h1>
     
 
-        <p class="article-excerpt">
-            
-1、打开Html文件
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" class="article-date">
+    <time datetime="2016-09-30T09:18:24.000Z" itemprop="datePublished">2016-09-30</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-tools/">Android_tools</a></li></ul>
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&q
-        </p>
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p>需求：<br>如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。</p>
+</blockquote>
+<p>在主工程(一般都是app)下的build.gradle里，配置2个签名：</p>
+<pre><code>signingConfigs {  
+    release {  
+    keyAlias &apos;###&apos;  
+    keyPassword &apos;******&apos;  
+    storeFile file(&apos;../###.jks&apos;)  
+    storePassword &apos;******&apos;  
+}  
+config {  
+    keyAlias &apos;androiddebugkey&apos;  
+    keyPassword &apos;android&apos;  
+    storeFile file(&apos;./debug.keystore&apos;)  
+    storePassword &apos;android&apos;  
+}  
+</code></pre><p>} </p>
+<p>其中keyAlias是签名的别名，keyPassword是签名密码，storeFile file是签名文件所在文件夹位置，这里是放在和app同级目录下。<br>到这里就可以，但是为了保护签名信息，可以优化处理：<br>在项目根目录下的gradle.properties文件中添加：</p>
+<pre><code>RELEASE_KEY_PASSWORD=****** //签名密码  
+RELEASE_KEY_ALIAS=****** //签名别名  
+RELEASE_STORE_PASSWORD=****** //store密码  
+RELEASE_STORE_FILE=***.jks //签名文件地址 
+</code></pre><p>然后修改之前的配置：</p>
+<pre><code>signingConfigs {  
+    release {  
+        keyAlias RELEASE_KEY_ALIAS  
+        keyPassword RELEASE_KEY_PASSWORD  
+        storeFile file(RELEASE_STORE_FILE)  
+        storePassword RELEASE_STORE_PASSWORD  
+    }  
+    config {  
+        keyAlias &apos;androiddebugkey&apos;  
+        keyPassword &apos;android&apos;  
+        storeFile file(&apos;./debug.keystore&apos;)  
+        storePassword &apos;android&apos;  
+    }  
+} 
+</code></pre>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" data-id="citpk6v6g0000qq8sd4npkock" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -235,6 +350,19 @@ public static Intent getHtmlFileIntent( String param )  {
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">git-命令行常用命令集锦(持续更新)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -377,11 +505,13 @@ public static Intent getHtmlFileIntent( String param )  {
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
