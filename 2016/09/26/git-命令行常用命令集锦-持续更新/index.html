@@ -26,7 +26,7 @@ $ git clone &amp;lt;版本库的网址&amp;gt;
 该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。
 $ git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt;
 git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git">
-<meta property="og:updated_time" content="2016-09-26T10:27:27.000Z">
+<meta property="og:updated_time" content="2016-09-30T08:38:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git-命令行常用命令集锦(持续更新)">
 <meta name="twitter:description" content="1、git clone
@@ -274,7 +274,783 @@ $ git config --global push.default simple
 </code></pre><p>上面命令使用–force选项，结果导致在远程主机产生一个”非直进式”的合并（non-fast-forward merge）。除非你很确定要这样做，否则应该尽量避免使用–force选项。<br>最后，git push不会推送标签（tag），除非使用–tags选项。</p>
 <pre><code>$ git push origin --tags
 </code></pre><blockquote>
-<p>Ps:参考文章</p>
+<p>6、git log</p>
+</blockquote>
+<p>日志输出</p>
+<pre><code>$ git log -author=&quot;aname&quot;
+</code></pre><p>只显示某个用户的提交</p>
+<pre><code>$ git log -name-only
+</code></pre><p>只显示变更了的文件的名称</p>
+<pre><code>$ git log -oneline
+</code></pre><p>将提交信息压缩成一行显示</p>
+<pre><code>$ git log -graph
+</code></pre><p>显示所有提交的依赖树</p>
+<pre><code>$ git log -reverse
+</code></pre><p>按照反序显示提交记录（最旧的提交在最前面）</p>
+<pre><code>$ git log -after
+</code></pre><p>显示某个日期之后的提交</p>
+<pre><code>$ git log -before
+</code></pre><p>显示某个日期之前的提交</p>
+<pre><code>$ git log -p filename
+</code></pre><p>查看某个文件的变更日志</p>
+<pre><code>$ git log -L 1,1:filename
+</code></pre><p>查看某文件（1,1）位置的变更日志</p>
+<pre><code>$ git blame filename
+</code></pre><p>查看某文件中的每一行是由谁变更的</p>
+<pre><code>$ git log --no-merges master..
+</code></pre><p>查看尚未合并到父分支的变更日志，注意–no-merges 选项意味着只显示没有合并到任何分支的变更，master..选项意味着只显示没有合并到master分支的变更（你必须在master后面加上..）。也可以使用 git show –no-merges master.. 或者 git log -p –no-merges master.. 命令（输出结果相同）来查看一下尚未合并的文件的详细变更。</p>
+<pre><code>$ git show branchname:filename
+</code></pre><p>查看指定分支上的指定文件的内容</p>
+<pre><code>$ git show branchname filename
+</code></pre><p>查看指定分支上的指定文件和当前分支上的对应文件的差异</p>
+<pre><code>$ git pull --reabase
+</code></pre><p>重新设置基线，这个命令会迫使git先将远程分支上的变更pull到本地，然后将尚未push的提交重新以这个最新版本作为基础添加进去，这样就可以避免合并以及丑陋的合并信息了。</p>
+<pre><code>$ git rebase
+</code></pre><p>相当与一次执行git pull和git merge，不同是的是，git会保留提交历史轨迹。<br>在rebase的过程中，也许会出现冲突(conflict). 在这种情况，Git会停止rebase并会让你去解决 冲突；在解决完冲突后，用”git-add”命令去更新这些内容的索引(index), 然后，你无需执行 git-commit,只要执行:</p>
+<pre><code>$ git rebase --continue
+</code></pre><p>这样git会继续应用(apply)余下的补丁。<br>在任何时候，你可以用–abort参数来终止rebase的行动，并且本地分支会回到rebase开始前的状态。</p>
+<pre><code>$ git rebase --abort    
+</code></pre><hr>
+<pre><code>$ git merge --no-ff
+</code></pre><p>本地合并后保留分支结构。</p>
+<pre><code>$ git commit --amend
+</code></pre><p>修复你之前的提交，而不是重新提交，也就是说修改的提交会追加到之前commit上，而不会产生新的commit。</p>
+<pre><code>$ git reset --hard commit-hash
+</code></pre><p>回滚到一个特定的历史版本，所有这次提交之后的变更都将被丢弃。</p>
+<pre><code>$ git reset commit-hash
+</code></pre><p>回滚到一个特定的历史版本，所有这次提交之后的变更都将被移到“准备提交且未暂存”状态，这意味着你必须使用git add . 和git commit把他们添加回仓库。</p>
+<pre><code>$ git reset --soft commit-hash
+</code></pre><p>回滚到一个特定的历史版本，所有这次提交之后的变更都将被移到“准备提交且已暂存”的状态，这意味着你仅仅只要执行git commit命令将它们添加回仓库。</p>
+<pre><code>$ git checkout filename
+</code></pre><p>取消某文件的本地变更。</p>
+<pre><code>$ git revert -n
+</code></pre><p>自动将回滚的文件重新提交到仓库，并且提示你要写一个新的提交信息。-n 选项告诉git先别急着提交，因为我只是想看一眼罢了。</p>
+<blockquote>
+<p>Ps：Git命令速查表</p>
+</blockquote>
+<p>1、常用的Git命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git add</td>
+<td style="text-align:left">添加至暂存区</td>
+</tr>
+<tr>
+<td style="text-align:left">git add–interactive</td>
+<td style="text-align:left">交互式添加</td>
+</tr>
+<tr>
+<td style="text-align:left">git apply</td>
+<td style="text-align:left">应用补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">git am</td>
+<td style="text-align:left">应用邮件格式补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">git annotate</td>
+<td style="text-align:left">同义词，等同于 git blame</td>
+</tr>
+<tr>
+<td style="text-align:left">git archive</td>
+<td style="text-align:left">文件归档打包</td>
+</tr>
+<tr>
+<td style="text-align:left">git bisect</td>
+<td style="text-align:left">二分查找</td>
+</tr>
+<tr>
+<td style="text-align:left">git blame</td>
+<td style="text-align:left">文件逐行追溯</td>
+</tr>
+<tr>
+<td style="text-align:left">git branch</td>
+<td style="text-align:left">分支管理</td>
+</tr>
+<tr>
+<td style="text-align:left">git cat-file</td>
+<td style="text-align:left">版本库对象研究工具</td>
+</tr>
+<tr>
+<td style="text-align:left">git checkout</td>
+<td style="text-align:left">检出到工作区、切换或创建分支</td>
+</tr>
+<tr>
+<td style="text-align:left">git cherry-pick</td>
+<td style="text-align:left">提交拣选</td>
+</tr>
+<tr>
+<td style="text-align:left">git citool</td>
+<td style="text-align:left">图形化提交，相当于 git gui 命令</td>
+</tr>
+<tr>
+<td style="text-align:left">git clean</td>
+<td style="text-align:left">清除工作区未跟踪文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git clone</td>
+<td style="text-align:left">克隆版本库</td>
+</tr>
+<tr>
+<td style="text-align:left">git commit</td>
+<td style="text-align:left">提交</td>
+</tr>
+<tr>
+<td style="text-align:left">git config</td>
+<td style="text-align:left">查询和修改配置</td>
+</tr>
+<tr>
+<td style="text-align:left">git describe</td>
+<td style="text-align:left">通过里程碑直观地显示提交ID</td>
+</tr>
+<tr>
+<td style="text-align:left">git diff</td>
+<td style="text-align:left">差异比较</td>
+</tr>
+<tr>
+<td style="text-align:left">git difftool</td>
+<td style="text-align:left">调用图形化差异比较工具</td>
+</tr>
+<tr>
+<td style="text-align:left">git fetch</td>
+<td style="text-align:left">获取远程版本库的提交</td>
+</tr>
+<tr>
+<td style="text-align:left">git format-patch</td>
+<td style="text-align:left">创建邮件格式的补丁文件。参见 git am 命令</td>
+</tr>
+<tr>
+<td style="text-align:left">git grep</td>
+<td style="text-align:left">文件内容搜索定位工具</td>
+</tr>
+<tr>
+<td style="text-align:left">git gui</td>
+<td style="text-align:left">基于Tcl/Tk的图形化工具，侧重提交等操作</td>
+</tr>
+<tr>
+<td style="text-align:left">git help</td>
+<td style="text-align:left">帮助</td>
+</tr>
+<tr>
+<td style="text-align:left">git init</td>
+<td style="text-align:left">版本库初始化</td>
+</tr>
+<tr>
+<td style="text-align:left">git init-db*</td>
+<td style="text-align:left">同义词，等同于 git init</td>
+</tr>
+<tr>
+<td style="text-align:left">git log</td>
+<td style="text-align:left">显示提交日志</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge</td>
+<td style="text-align:left">分支合并</td>
+</tr>
+<tr>
+<td style="text-align:left">git mergetool</td>
+<td style="text-align:left">图形化冲突解决</td>
+</tr>
+<tr>
+<td style="text-align:left">git mv</td>
+<td style="text-align:left">重命名</td>
+</tr>
+<tr>
+<td style="text-align:left">git pull</td>
+<td style="text-align:left">拉回远程版本库的提交</td>
+</tr>
+<tr>
+<td style="text-align:left">git push</td>
+<td style="text-align:left">推送至远程版本库</td>
+</tr>
+<tr>
+<td style="text-align:left">git reBase</td>
+<td style="text-align:left">分支变基</td>
+</tr>
+<tr>
+<td style="text-align:left">git rebase–interactive</td>
+<td style="text-align:left">交互式分支变基</td>
+</tr>
+<tr>
+<td style="text-align:left">git reflog</td>
+<td style="text-align:left">分支等引用变更记录管理</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote</td>
+<td style="text-align:left">远程版本库管理</td>
+</tr>
+<tr>
+<td style="text-align:left">git repo-config*</td>
+<td style="text-align:left">同义词，等同于 git config</td>
+</tr>
+<tr>
+<td style="text-align:left">git reset</td>
+<td style="text-align:left">重置改变分支“游标”指向</td>
+</tr>
+<tr>
+<td style="text-align:left">git rev-parse</td>
+<td style="text-align:left">将各种引用表示法转换为哈希值等</td>
+</tr>
+<tr>
+<td style="text-align:left">git revert</td>
+<td style="text-align:left">反转提交</td>
+</tr>
+<tr>
+<td style="text-align:left">git rm</td>
+<td style="text-align:left">删除文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git show</td>
+<td style="text-align:left">显示各种类型的对象</td>
+</tr>
+<tr>
+<td style="text-align:left">git stage*</td>
+<td style="text-align:left">同义词，等同于 git add</td>
+</tr>
+<tr>
+<td style="text-align:left">git stash</td>
+<td style="text-align:left">保存和恢复进度</td>
+</tr>
+<tr>
+<td style="text-align:left">git status</td>
+<td style="text-align:left">显示工作区文件状态</td>
+</tr>
+<tr>
+<td style="text-align:left">git tag</td>
+<td style="text-align:left">里程碑管理</td>
+</tr>
+</tbody>
+</table>
+<p>2、对象库操作相关命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git commit-tree</td>
+<td style="text-align:left">从树对象创建提交</td>
+</tr>
+<tr>
+<td style="text-align:left">git hash-object</td>
+<td style="text-align:left">从标准输入或文件计算哈希值或创建对象</td>
+</tr>
+<tr>
+<td style="text-align:left">git ls-files</td>
+<td style="text-align:left">显示工作区和暂存区文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git ls-tree</td>
+<td style="text-align:left">显示树对象包含的文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git mktag</td>
+<td style="text-align:left">读取标准输入创建一个里程碑对象</td>
+</tr>
+<tr>
+<td style="text-align:left">git mktree</td>
+<td style="text-align:left">读取标准输入创建一个树对象</td>
+</tr>
+<tr>
+<td style="text-align:left">git read-tree</td>
+<td style="text-align:left">读取树对象到暂存区</td>
+</tr>
+<tr>
+<td style="text-align:left">git update-index</td>
+<td style="text-align:left">工作区内容注册到暂存区及暂存区管理</td>
+</tr>
+<tr>
+<td style="text-align:left">git unpack-file</td>
+<td style="text-align:left">创建临时文件包含指定 blob 的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">git write-tree</td>
+<td style="text-align:left">从暂存区创建一个树对象</td>
+</tr>
+</tbody>
+</table>
+<p>3、引用操作相关命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git check-ref-format</td>
+<td style="text-align:left">检查引用名称是否符合规范</td>
+</tr>
+<tr>
+<td style="text-align:left">git for-each-ref</td>
+<td style="text-align:left">引用迭代器，用于shell编程</td>
+</tr>
+<tr>
+<td style="text-align:left">git ls-remote</td>
+<td style="text-align:left">显示远程版本库的引用</td>
+</tr>
+<tr>
+<td style="text-align:left">git name-rev</td>
+<td style="text-align:left">将提交ID显示为友好名称</td>
+</tr>
+<tr>
+<td style="text-align:left">git peek-remote*</td>
+<td style="text-align:left">过时命令，请使用 git ls-remote</td>
+</tr>
+<tr>
+<td style="text-align:left">git rev-list    显示版本范围</td>
+</tr>
+<tr>
+<td style="text-align:left">git show-branch</td>
+<td style="text-align:left">显示分支列表及拓扑关系</td>
+</tr>
+<tr>
+<td style="text-align:left">git show-ref</td>
+<td style="text-align:left">显示本地引用</td>
+</tr>
+<tr>
+<td style="text-align:left">git symbolic-ref</td>
+<td style="text-align:left">显示或者设置符号引用</td>
+</tr>
+<tr>
+<td style="text-align:left">git update-ref</td>
+<td style="text-align:left">更新引用的指向</td>
+</tr>
+<tr>
+<td style="text-align:left">git verify-tag</td>
+<td style="text-align:left">校验 GPG 签名的Tag</td>
+</tr>
+</tbody>
+</table>
+<p>4、版本库管理相关命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git count-objects</td>
+<td style="text-align:left">显示松散对象的数量和磁盘占用</td>
+</tr>
+<tr>
+<td style="text-align:left">git filter-branch</td>
+<td style="text-align:left">版本库重构</td>
+</tr>
+<tr>
+<td style="text-align:left">git fsck</td>
+<td style="text-align:left">对象库完整性检查</td>
+</tr>
+<tr>
+<td style="text-align:left">git fsck-objects*</td>
+<td style="text-align:left">同义词，等同于 git fsck</td>
+</tr>
+<tr>
+<td style="text-align:left">git gc</td>
+<td style="text-align:left">版本库存储优化</td>
+</tr>
+<tr>
+<td style="text-align:left">git index-pack</td>
+<td style="text-align:left">从打包文件创建对应的索引文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git lost-found*</td>
+<td style="text-align:left">过时，请使用 git fsck –lost-found 命令</td>
+</tr>
+<tr>
+<td style="text-align:left">git pack-objects</td>
+<td style="text-align:left">从标准输入读入对象ID，打包到文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git pack-redundant</td>
+<td style="text-align:left">查找多余的 pack 文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git pack-refs</td>
+<td style="text-align:left">将引用打包到 .git/packed-refs 文件中</td>
+</tr>
+<tr>
+<td style="text-align:left">git prune</td>
+<td style="text-align:left">从对象库删除过期对象</td>
+</tr>
+<tr>
+<td style="text-align:left">git prune-packed</td>
+<td style="text-align:left">将已经打包的松散对象删除</td>
+</tr>
+<tr>
+<td style="text-align:left">git relink</td>
+<td style="text-align:left">为本地版本库中相同的对象建立硬连接</td>
+</tr>
+<tr>
+<td style="text-align:left">git repack</td>
+<td style="text-align:left">将版本库未打包的松散对象打包</td>
+</tr>
+<tr>
+<td style="text-align:left">git show-index</td>
+<td style="text-align:left">读取包的索引文件，显示打包文件中的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">git unpack-objects</td>
+<td style="text-align:left">从打包文件释放文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git verify-pack</td>
+<td style="text-align:left">校验对象库打包文件</td>
+</tr>
+</tbody>
+</table>
+<p>5、数据传输相关命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git fetch-pack</td>
+<td style="text-align:left">执行 git fetch 或 git pull 命令时在本地执行此命令，用于从其他版本库获取缺失的对象</td>
+</tr>
+<tr>
+<td style="text-align:left">git receive-pack</td>
+<td style="text-align:left">执行 git push 命令时在远程执行的命令，用于接受推送的数据</td>
+</tr>
+<tr>
+<td style="text-align:left">git send-pack</td>
+<td style="text-align:left">执行 git push 命令时在本地执行的命令，用于向其他版本库推送数据</td>
+</tr>
+<tr>
+<td style="text-align:left">git upload-archive</td>
+<td style="text-align:left">执行 git archive –remote 命令基于远程版本库创建归档时，远程版本库执行此命令传送归档</td>
+</tr>
+<tr>
+<td style="text-align:left">git upload-pack</td>
+<td style="text-align:left">执行 git fetch 或 git pull 命令时在远程执行此命令，将对象打包、上传</td>
+</tr>
+</tbody>
+</table>
+<p>6、邮件相关命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git imap-send</td>
+<td style="text-align:left">将补丁通过 IMAP 发送</td>
+</tr>
+<tr>
+<td style="text-align:left">git mailinfo</td>
+<td style="text-align:left">从邮件导出提交说明和补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">git mailsplit</td>
+<td style="text-align:left">将 mbox 或 Maildir 格式邮箱中邮件逐一提取为文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git request-pull</td>
+<td style="text-align:left">创建包含提交间差异和执行PULL操作地址的信息</td>
+</tr>
+<tr>
+<td style="text-align:left">git send-email</td>
+<td style="text-align:left">发送邮件</td>
+</tr>
+</tbody>
+</table>
+<p>7、协议相关命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git daemon</td>
+<td style="text-align:left">实现Git协议</td>
+</tr>
+<tr>
+<td style="text-align:left">git http-backend</td>
+<td style="text-align:left">实现HTTP协议的CGI程序，支持智能HTTP协议</td>
+</tr>
+<tr>
+<td style="text-align:left">git instaweb</td>
+<td style="text-align:left">即时启动浏览器通过 gitweb 浏览当前版本库</td>
+</tr>
+<tr>
+<td style="text-align:left">git shell</td>
+<td style="text-align:left">受限制的shell，提供仅执行Git命令的SSH访问</td>
+</tr>
+<tr>
+<td style="text-align:left">git update-server-info</td>
+<td style="text-align:left">更新哑协议需要的辅助文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git http-fetch</td>
+<td style="text-align:left">通过HTTP协议获取版本库</td>
+</tr>
+<tr>
+<td style="text-align:left">git http-push</td>
+<td style="text-align:left">通过HTTP/DAV协议推送</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote-ext</td>
+<td style="text-align:left">由Git命令调用，通过外部命令提供扩展协议支持</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote-fd</td>
+<td style="text-align:left">由Git命令调用，使用文件描述符作为协议接口</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote-ftp</td>
+<td style="text-align:left">由Git命令调用，提供对FTP协议的支持</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote-ftps</td>
+<td style="text-align:left">由Git命令调用，提供对FTPS协议的支持</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote-http</td>
+<td style="text-align:left">由Git命令调用，提供对HTTP协议的支持</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote-https</td>
+<td style="text-align:left">由Git命令调用，提供对HTTPS协议的支持</td>
+</tr>
+<tr>
+<td style="text-align:left">git remote-testgit</td>
+<td style="text-align:left">协议扩展示例脚本</td>
+</tr>
+</tbody>
+</table>
+<p>8、版本库转换和交互相关命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git archimport</td>
+<td style="text-align:left">导入Arch版本库到Git</td>
+</tr>
+<tr>
+<td style="text-align:left">git bundle</td>
+<td style="text-align:left">提交打包和解包，以便在不同版本库间传递</td>
+</tr>
+<tr>
+<td style="text-align:left">git cvsexportcommit</td>
+<td style="text-align:left">将Git的一个提交作为一个CVS检出</td>
+</tr>
+<tr>
+<td style="text-align:left">git cvsimport</td>
+<td style="text-align:left">导入CVS版本库到Git。或者使用 cvs2git</td>
+</tr>
+<tr>
+<td style="text-align:left">git cvsserver</td>
+<td style="text-align:left">Git的CVS协议模拟器，可供CVS命令访问Git版本库</td>
+</tr>
+<tr>
+<td style="text-align:left">git fast-export</td>
+<td style="text-align:left">将提交导出为 git-fast-import 格式</td>
+</tr>
+<tr>
+<td style="text-align:left">git fast-import</td>
+<td style="text-align:left">其他版本库迁移至Git的通用工具</td>
+</tr>
+<tr>
+<td style="text-align:left">git svn</td>
+<td style="text-align:left">Git 作为前端操作 Subversion</td>
+</tr>
+</tbody>
+</table>
+<p>9、合并相关的辅助命令</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git merge-base</td>
+<td style="text-align:left">供其他脚本调用，找到两个或多个提交最近的共同祖先</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-file</td>
+<td style="text-align:left">针对文件的两个不同版本执行三向文件合并</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-index</td>
+<td style="text-align:left">对index中的冲突文件调用指定的冲突解决工具</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-octopus</td>
+<td style="text-align:left">合并两个以上分支。参见 git merge 的octopus合并策略</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-one-file</td>
+<td style="text-align:left">由 git merge-index 调用的标准辅助程序</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-ours</td>
+<td style="text-align:left">合并使用本地版本，抛弃他人版本。参见 git merge 的ours合并策略</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-recursive</td>
+<td style="text-align:left">针对两个分支的三向合并。参见 git merge 的recursive合并策略</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-resolve</td>
+<td style="text-align:left">针对两个分支的三向合并。参见 git merge 的resolve合并策略</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-subtree</td>
+<td style="text-align:left">子树合并。参见 git merge 的 subtree 合并策略</td>
+</tr>
+<tr>
+<td style="text-align:left">git merge-tree</td>
+<td style="text-align:left">显式三向合并结果，不改变暂存区</td>
+</tr>
+<tr>
+<td style="text-align:left">git fmt-merge-msg</td>
+<td style="text-align:left">供执行合并操作的脚本调用，用于创建一个合并提交说明</td>
+</tr>
+<tr>
+<td style="text-align:left">git rerere</td>
+<td style="text-align:left">重用所记录的冲突解决方案</td>
+</tr>
+</tbody>
+</table>
+<p>10、 杂项</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">简要说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">git bisect–helper</td>
+<td style="text-align:left">由 git bisect 命令调用，确认二分查找进度</td>
+</tr>
+<tr>
+<td style="text-align:left">git check-attr</td>
+<td style="text-align:left">显示某个文件是否设置了某个属性</td>
+</tr>
+<tr>
+<td style="text-align:left">git checkout-index</td>
+<td style="text-align:left">从暂存区拷贝文件至工作区</td>
+</tr>
+<tr>
+<td style="text-align:left">git cherry</td>
+<td style="text-align:left">查找没有合并到上游的提交</td>
+</tr>
+<tr>
+<td style="text-align:left">git diff-files</td>
+<td style="text-align:left">比较暂存区和工作区，相当于 git diff –raw</td>
+</tr>
+<tr>
+<td style="text-align:left">git diff-index</td>
+<td style="text-align:left">比较暂存区和版本库，相当于 git diff –cached –raw</td>
+</tr>
+<tr>
+<td style="text-align:left">git diff-tree</td>
+<td style="text-align:left">比较两个树对象，相当于 git diff –raw A B</td>
+</tr>
+<tr>
+<td style="text-align:left">git difftool–helper</td>
+<td style="text-align:left">由 git difftool 命令调用，默认要使用的差异比较工具</td>
+</tr>
+<tr>
+<td style="text-align:left">git get-tar-commit-id</td>
+<td style="text-align:left">从 git archive 创建的 tar 包中提取提交ID</td>
+</tr>
+<tr>
+<td style="text-align:left">git gui–askpass</td>
+<td style="text-align:left">命令 git gui 的获取用户口令输入界面</td>
+</tr>
+<tr>
+<td style="text-align:left">git notes</td>
+<td style="text-align:left">提交评论管理</td>
+</tr>
+<tr>
+<td style="text-align:left">git patch-id</td>
+<td style="text-align:left">补丁过滤行号和空白字符后生成补丁唯一ID</td>
+</tr>
+<tr>
+<td style="text-align:left">git quiltimport</td>
+<td style="text-align:left">将Quilt补丁列表应用到当前分支</td>
+</tr>
+<tr>
+<td style="text-align:left">git replace</td>
+<td style="text-align:left">提交替换</td>
+</tr>
+<tr>
+<td style="text-align:left">git shortlog</td>
+<td style="text-align:left">对 git log 的汇总输出，适合于产品发布说明</td>
+</tr>
+<tr>
+<td style="text-align:left">git stripspace</td>
+<td style="text-align:left">删除空行，供其他脚本调用</td>
+</tr>
+<tr>
+<td style="text-align:left">git submodule</td>
+<td style="text-align:left">子模组管理</td>
+</tr>
+<tr>
+<td style="text-align:left">git tar-tree</td>
+<td style="text-align:left">过时命令，请使用 git archive</td>
+</tr>
+<tr>
+<td style="text-align:left">git var</td>
+<td style="text-align:left">显示 Git 环境变量</td>
+</tr>
+<tr>
+<td style="text-align:left">git web–browse</td>
+<td style="text-align:left">启动浏览器以查看目录或文件</td>
+</tr>
+<tr>
+<td style="text-align:left">git whatchanged</td>
+<td style="text-align:left">显示提交历史及每次提交的改动</td>
+</tr>
+<tr>
+<td style="text-align:left">git-mergetool–lib</td>
+<td style="text-align:left">包含于其他脚本中，提供合并/差异比较工具的选择和执行</td>
+</tr>
+<tr>
+<td style="text-align:left">git-parse-remote</td>
+<td style="text-align:left">包含于其他脚本中，提供操作远程版本库的函数</td>
+</tr>
+<tr>
+<td style="text-align:left">git-sh-setup</td>
+<td style="text-align:left">包含于其他脚本中，提供 shell 编程的函数库</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Ps：参考文章</p>
 </blockquote>
 <ol>
 <li><a href="http://w3cschool.codecloud.net/git/git-remote-operating.html" target="_blank" rel="external">Git 远程操作的正确姿势</a></li>
@@ -286,7 +1062,7 @@ $ git config --global push.default simple
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="citogt68f000nqt8sguc8jvpc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="citpiprcr000ja28s7oiisi4b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
