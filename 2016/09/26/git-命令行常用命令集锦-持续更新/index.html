@@ -26,7 +26,7 @@ $ git clone &amp;lt;版本库的网址&amp;gt;
 该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。
 $ git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt;
 git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git">
-<meta property="og:updated_time" content="2016-10-02T03:01:25.000Z">
+<meta property="og:updated_time" content="2016-10-02T08:34:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git-命令行常用命令集锦(持续更新)">
 <meta name="twitter:description" content="1、git clone
@@ -332,13 +332,25 @@ $ git config --global push.default simple
 <pre><code>$ git revert -n
 </code></pre><p>自动将回滚的文件重新提交到仓库，并且提示你要写一个新的提交信息。-n 选项告诉git先别急着提交，因为我只是想看一眼罢了。</p>
 <blockquote>
-<p>6、git clean</p>
+<p>7、git clean</p>
 </blockquote>
 <p>有时，Git会提示“untracked working tree files”会“overwritten by checkout”。造成这种情况的原因有很多。不过通常来说，我们可以使用如下命令来保持工作树的整洁，从而防止这种情况的发生：</p>
 <pre><code>$ git clean -f     # remove untracked files
 $ git clean -fd    # remove untracked files/directories
 $ git clean -nfd   # list all files/directories that would be removed
 </code></pre><blockquote>
+<p>8、git tag</p>
+</blockquote>
+<p>查看标签（用来标记标志性的稳定版本信息）</p>
+<pre><code>$ git tag -l &apos;[expression]&apos;
+</code></pre><p>查看那符合正则表达式的</p>
+<pre><code>$ git tag -a &lt;tag name&gt; -m &lt;comment&gt;
+</code></pre><p>添加带注释的标签</p>
+<pre><code>$ git tag -a &lt;tag name&gt; &lt;md5&gt;
+</code></pre><p>对某个版本打标签</p>
+<pre><code>$ git tag [tag name]
+</code></pre><p>如果没有标签名，则为查看所有标签。带标签名则为新建标签</p>
+<blockquote>
 <p>Ps：Git命令速查表</p>
 </blockquote>
 <p>1、常用的Git命令</p>
@@ -1076,7 +1088,7 @@ $ git clean -nfd   # list all files/directories that would be removed
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="cits1kxgm000dmi8s2iitad9m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="citsdgh7x000ja28s42civjph" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
