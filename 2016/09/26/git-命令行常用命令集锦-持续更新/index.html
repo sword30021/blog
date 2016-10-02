@@ -26,7 +26,7 @@ $ git clone &amp;lt;版本库的网址&amp;gt;
 该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。
 $ git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt;
 git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git">
-<meta property="og:updated_time" content="2016-09-30T09:50:40.000Z">
+<meta property="og:updated_time" content="2016-10-02T03:01:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git-命令行常用命令集锦(持续更新)">
 <meta name="twitter:description" content="1、git clone
@@ -192,7 +192,13 @@ $ git clone rsync://example.com/path/to/repo.git/
 SSH协议还有另一种写法。
 $ git clone [user@]example.com:path/to/repo.git/
 </code></pre><p>通常来说，Git协议下载速度最快，SSH协议用于需要用户认证的场合。</p>
-<blockquote>
+<p>如果想要从远程仓库中克隆一个特定的分支该怎么做呢？通常你会使用git clone，不过这么做会将所有其他分支都一并克隆下来。一个便捷的方式是使用git remote add：</p>
+<pre><code>$ git init  
+$ git remote add -t  -f origin
+$ git checkout
+</code></pre><p>如果只想将远程仓库的一个特定提交合并到自己的分支中该怎么做呢？可以使用git cherry-pick 来选择给定SHA值的提交，然后将其合并到当前分支中：</p>
+<pre><code>$ git cherry-pick
+</code></pre><blockquote>
 <p>2、git remote</p>
 </blockquote>
 <p>为了便于管理，Git要求每个远程主机都必须指定一个主机名。git remote命令就用于管理主机名。<br>不带选项的时候，git remote命令列出所有远程主机。<br>使用-v选项，可以参看远程主机的网址。</p>
@@ -326,6 +332,13 @@ $ git config --global push.default simple
 <pre><code>$ git revert -n
 </code></pre><p>自动将回滚的文件重新提交到仓库，并且提示你要写一个新的提交信息。-n 选项告诉git先别急着提交，因为我只是想看一眼罢了。</p>
 <blockquote>
+<p>6、git clean</p>
+</blockquote>
+<p>有时，Git会提示“untracked working tree files”会“overwritten by checkout”。造成这种情况的原因有很多。不过通常来说，我们可以使用如下命令来保持工作树的整洁，从而防止这种情况的发生：</p>
+<pre><code>$ git clean -f     # remove untracked files
+$ git clean -fd    # remove untracked files/directories
+$ git clean -nfd   # list all files/directories that would be removed
+</code></pre><blockquote>
 <p>Ps：Git命令速查表</p>
 </blockquote>
 <p>1、常用的Git命令</p>
@@ -1063,7 +1076,7 @@ $ git config --global push.default simple
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="citplaheq000d0m8so8emx5cq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="cits1kxgm000dmi8s2iitad9m" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
