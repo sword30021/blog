@@ -13,8 +13,7 @@
 在主工程(一般都是app)下的build.gradle里，配置2个签名：
 signingConfigs {  
     release {  
-    keyAlias &amp;apos;###&amp;apos;  
-    key">
+      keyAlias &amp;apos;###&amp;apos;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Studio配置正式签名和debug签名">
 <meta property="og:url" content="https://sword30021.github.io/blog/2016/09/30/Android-Studio配置正式签名和debug签名/index.html">
@@ -24,9 +23,8 @@ signingConfigs {
 在主工程(一般都是app)下的build.gradle里，配置2个签名：
 signingConfigs {  
     release {  
-    keyAlias &amp;apos;###&amp;apos;  
-    key">
-<meta property="og:updated_time" content="2016-09-30T09:19:39.000Z">
+      keyAlias &amp;apos;###&amp;apos;">
+<meta property="og:updated_time" content="2016-10-02T08:55:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio配置正式签名和debug签名">
 <meta name="twitter:description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
@@ -34,8 +32,7 @@ signingConfigs {
 在主工程(一般都是app)下的build.gradle里，配置2个签名：
 signingConfigs {  
     release {  
-    keyAlias &amp;apos;###&amp;apos;  
-    key">
+      keyAlias &amp;apos;###&amp;apos;">
     
 
     
@@ -179,19 +176,26 @@ signingConfigs {
 <p>在主工程(一般都是app)下的build.gradle里，配置2个签名：</p>
 <pre><code>signingConfigs {  
     release {  
-    keyAlias &apos;###&apos;  
-    keyPassword &apos;******&apos;  
-    storeFile file(&apos;../###.jks&apos;)  
-    storePassword &apos;******&apos;  
-}  
-config {  
-    keyAlias &apos;androiddebugkey&apos;  
-    keyPassword &apos;android&apos;  
-    storeFile file(&apos;./debug.keystore&apos;)  
-    storePassword &apos;android&apos;  
-}  
-</code></pre><p>} </p>
-<p>其中keyAlias是签名的别名，keyPassword是签名密码，storeFile file是签名文件所在文件夹位置，这里是放在和app同级目录下。<br>到这里就可以，但是为了保护签名信息，可以优化处理：<br>在项目根目录下的gradle.properties文件中添加：</p>
+      keyAlias &apos;###&apos;  
+      keyPassword &apos;******&apos;  
+      storeFile file(&apos;../###.jks&apos;)  
+      storePassword &apos;******&apos;  
+    }  
+    debug {  
+      keyAlias &apos;androiddebugkey&apos;  
+      keyPassword &apos;android&apos;  
+      storeFile file(&apos;./debug.keystore&apos;)  
+      storePassword &apos;android&apos;  
+}
+buildTypes {       
+    debug {           
+      signingConfig signingConfigs.release       
+    }       
+    release {           
+      signingConfig signingConfigs.release       
+    }   
+  }
+</code></pre><p>其中keyAlias是签名的别名，keyPassword是签名密码，storeFile file是签名文件所在文件夹位置，这里是放在和app同级目录下。<br>到这里就可以，但是为了保护签名信息，可以优化处理：<br>在项目根目录下的gradle.properties文件中添加：</p>
 <pre><code>RELEASE_KEY_PASSWORD=****** //签名密码  
 RELEASE_KEY_ALIAS=****** //签名别名  
 RELEASE_STORE_PASSWORD=****** //store密码  
@@ -218,7 +222,7 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" data-id="citsdgh760004a28s93i6eeum" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" data-id="citsefmpl0000np8si6sngkaw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
