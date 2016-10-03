@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     
-    <title>分类：: 开发知识 | 自由的程序员</title>
+    <title>分类：: 其它 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description" content="IT技术学习和记录">
 <meta property="og:type" content="website">
 <meta property="og:title" content="自由的程序员">
-<meta property="og:url" content="https://sword30021.github.io/blog/categories/Web/开发知识/index.html">
+<meta property="og:url" content="https://sword30021.github.io/blog/categories/其它/index.html">
 <meta property="og:site_name" content="自由的程序员">
 <meta property="og:description" content="IT技术学习和记录">
 <meta name="twitter:card" content="summary">
@@ -123,7 +123,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">开发知识</em>
+    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">其它</em>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -148,58 +148,36 @@
         
         <div class="article-meta">
             <p class="category">
-            <a class="article-category-link" href="/blog/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Web/开发知识/">开发知识</a>
+            <a class="article-category-link" href="/blog/categories/其它/">其它</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/其它/正则表达式/">正则表达式</a>
             </p>
-            <p class="date"><time datetime="2016-09-26T08:56:03.000Z" itemprop="datePublished">2016-09-26</time></p>
+            <p class="date"><time datetime="2016-10-03T03:23:31.000Z" itemprop="datePublished">2016-10-03</time></p>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/26/css-元素垂直居中的6种方法/">css-元素垂直居中的6种方法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            利用CSS进行元素的水平居中，比较简单，行级元素设置其父元素的text-align center，块级元素设置其本身的left 和 right margins为auto即可。本文收集了六种利用css进行元素的垂直居中的方法，每一种适用于不同的情况，在实际的使用过程中选择某一种方法即可。
-
-1、Line-Height Method适用：单行文本垂直居中
-
-html代码：
-&lt;div id=&qu
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Web/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T08:19:48.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/css-如何规定某一元素高度等于其宽度/">css-如何规定某一元素高度等于其宽度</a>
+        <a href="/blog/2016/10/03/常用正则表达式收集-持续更新/">常用正则表达式收集(持续更新)</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-使用js实现
+1、校验密码强度
 
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $(document).ready(function(){
-    $(&apos;#box1&apos;).css(&apos;height&apos;,$(&apos;#box1&apos;).css(&apos;width&apos;));
-})
-&lt;/script&
+密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。
+^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+
+2、校验中文
+
+字符串仅能是中文。
+^[\\u4e00-\\u9fa5]{0,}$
+
+3、由数组、26个英文字母或下划线组成的字符串
+
+^\\w+$
+
+4、校验e-mail地址
+
+[\\w!#$%&amp;&a
         </p>
     </div>
 </article>

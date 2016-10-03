@@ -64,7 +64,7 @@
                                     <a class="main-nav-list-link" href="/blog/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/">Android</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/开发工具/">开发工具</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/开发知识/">开发知识</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Mac/">Mac</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/开发工具/">开发工具</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/开发知识/">开发知识</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/版本控制/">版本控制</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/版本控制/git/">git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/版本控制/svn/">svn</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/">Android</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/开发工具/">开发工具</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Android/开发知识/">开发知识</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Mac/">Mac</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/开发工具/">开发工具</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/Web/开发知识/">开发知识</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/其它/">其它</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/其它/正则表达式/">正则表达式</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/版本控制/">版本控制</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/版本控制/git/">git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/版本控制/svn/">svn</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/blog/about/index.html">关于</a>
@@ -148,6 +148,50 @@
         
         <div class="article-meta">
             <p class="category">
+            <a class="article-category-link" href="/blog/categories/其它/">其它</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/其它/正则表达式/">正则表达式</a>
+            </p>
+            <p class="date"><time datetime="2016-10-03T03:23:31.000Z" itemprop="datePublished">2016-10-03</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/blog/2016/10/03/常用正则表达式收集-持续更新/">常用正则表达式收集(持续更新)</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+1、校验密码强度
+
+密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。
+^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+
+2、校验中文
+
+字符串仅能是中文。
+^[\\u4e00-\\u9fa5]{0,}$
+
+3、由数组、26个英文字母或下划线组成的字符串
+
+^\\w+$
+
+4、校验e-mail地址
+
+[\\w!#$%&amp;&a
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
             <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发工具/">开发工具</a>
             </p>
             <p class="date"><time datetime="2016-09-30T09:18:24.000Z" itemprop="datePublished">2016-09-30</time></p>
@@ -172,10 +216,14 @@ signingConfigs {
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -206,14 +254,10 @@ git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -248,10 +292,14 @@ svn commit -m “your content”简写：svn c
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -280,14 +328,10 @@ html代码：
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -322,10 +366,14 @@ cp ~/.oh-my-zsh/templates/zs
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -358,14 +406,10 @@ step1:检查是否安装了jdk(Mac系统默认已安装)
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -390,10 +434,14 @@ step1:检查是否安装了jdk(Mac系统默认已安装)
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -422,14 +470,10 @@ step1:检查是否安装了jdk(Mac系统默认已安装)
     </div>
 </article>
     
-        </div>
-    
 
     
     
     
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -456,44 +500,6 @@ Homebrew简称brew 。
 安装Homebrew
 
 在Mac中打开Termal:  输入命令：ruby -e “$(curl –insecure -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Web/开发工具/">开发工具</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T08:26:10.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/常用Atom插件列表（持续更新-）/">常用Atom插件列表（持续更新...）</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-1、simplified-chinese-menu
-2、tree-view-finder
-3、minimap
-4、linter和linter-jshint
-5、linter-js-standard
-6、git-plus
-7、file-types和file-types-icon
-8、emmet
-9、autoclose-html
-10、atom-ternjs
-11、atom-html-preview
         </p>
     </div>
 </article>
@@ -582,6 +588,15 @@ Homebrew简称brew 。
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/其它/">其它</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/其它/正则表达式/">正则表达式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/03/常用正则表达式收集-持续更新/" class="title">常用正则表达式收集(持续更新)</a></p>
+                            <p class="item-date"><time datetime="2016-10-03T03:23:31.000Z" itemprop="datePublished">2016-10-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发工具/">开发工具</a></p>
                             <p class="item-title"><a href="/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" class="title">Android Studio配置正式签名和debug签名</a></p>
                             <p class="item-date"><time datetime="2016-09-30T09:18:24.000Z" itemprop="datePublished">2016-09-30</time></p>
@@ -615,15 +630,6 @@ Homebrew简称brew 。
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a></p>
-                            <p class="item-title"><a href="/blog/2016/09/22/Mac上安装oh-my-zsh/" class="title">Mac上安装oh-my-zsh</a></p>
-                            <p class="item-date"><time datetime="2016-09-22T08:43:20.000Z" itemprop="datePublished">2016-09-22</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -633,7 +639,7 @@ Homebrew简称brew 。
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/">Android</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发工具/">开发工具</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发工具/Android-Studio/">Android Studio</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/">开发知识</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/Android控件/">Android控件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/Other/">Other</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/">Mac</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/">Web</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发工具/">开发工具</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发工具/Atom/">Atom</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发知识/">开发知识</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发知识/Css/">Css</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/版本控制/">版本控制</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/版本控制/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/版本控制/svn/">svn</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/">Android</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发工具/">开发工具</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发工具/Android-Studio/">Android Studio</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/">开发知识</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/Android控件/">Android控件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Android/开发知识/Other/">Other</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/">Mac</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/">Web</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发工具/">开发工具</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发工具/Atom/">Atom</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发知识/">开发知识</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web/开发知识/Css/">Css</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/其它/">其它</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/其它/正则表达式/">正则表达式</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/版本控制/">版本控制</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/版本控制/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/版本控制/svn/">svn</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -643,7 +649,7 @@ Homebrew简称brew 。
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">九月 2016</a><span class="archive-list-count">15</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">九月 2016</a><span class="archive-list-count">15</span></li></ul>
         </div>
     </div>
 
@@ -653,7 +659,7 @@ Homebrew简称brew 。
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-EditText/">Android_EditText</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-Intent/">Android_Intent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-Resource/">Android_Resource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-tools/">Android_tools</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Css/">Css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mac/">Mac</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web/">Web</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/svn/">svn</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android/">Android</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-EditText/">Android_EditText</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-Intent/">Android_Intent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-Resource/">Android_Resource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Android-tools/">Android_tools</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Atom/">Atom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Css/">Css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mac/">Mac</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Regex/">Regex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web/">Web</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/svn/">svn</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -663,7 +669,7 @@ Homebrew简称brew 。
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/blog/tags/Android/" style="font-size: 20px;">Android</a> <a href="/blog/tags/Android-EditText/" style="font-size: 10px;">Android_EditText</a> <a href="/blog/tags/Android-Intent/" style="font-size: 10px;">Android_Intent</a> <a href="/blog/tags/Android-Resource/" style="font-size: 10px;">Android_Resource</a> <a href="/blog/tags/Android-tools/" style="font-size: 13.33px;">Android_tools</a> <a href="/blog/tags/Atom/" style="font-size: 10px;">Atom</a> <a href="/blog/tags/Css/" style="font-size: 13.33px;">Css</a> <a href="/blog/tags/Mac/" style="font-size: 20px;">Mac</a> <a href="/blog/tags/Web/" style="font-size: 16.67px;">Web</a> <a href="/blog/tags/git/" style="font-size: 10px;">git</a> <a href="/blog/tags/svn/" style="font-size: 10px;">svn</a>
+            <a href="/blog/tags/Android/" style="font-size: 20px;">Android</a> <a href="/blog/tags/Android-EditText/" style="font-size: 10px;">Android_EditText</a> <a href="/blog/tags/Android-Intent/" style="font-size: 10px;">Android_Intent</a> <a href="/blog/tags/Android-Resource/" style="font-size: 10px;">Android_Resource</a> <a href="/blog/tags/Android-tools/" style="font-size: 13.33px;">Android_tools</a> <a href="/blog/tags/Atom/" style="font-size: 10px;">Atom</a> <a href="/blog/tags/Css/" style="font-size: 13.33px;">Css</a> <a href="/blog/tags/Mac/" style="font-size: 20px;">Mac</a> <a href="/blog/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/blog/tags/Web/" style="font-size: 16.67px;">Web</a> <a href="/blog/tags/git/" style="font-size: 10px;">git</a> <a href="/blog/tags/svn/" style="font-size: 10px;">svn</a>
         </div>
     </div>
 
