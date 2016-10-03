@@ -3,18 +3,33 @@
 <head>
     <meta charset="utf-8">
     
-    <title>分类：: 开发知识 | 自由的程序员</title>
+    <title>Android-避免App启动黑白屏闪现的2种方式 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="IT技术学习和记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="自由的程序员">
-<meta property="og:url" content="https://sword30021.github.io/blog/categories/Android/开发知识/index.html">
+        <meta name="keywords" content="Android" />
+    
+    <meta name="description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
+
+1、自定义Theme
+
+&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android-避免App启动黑白屏闪现的2种方式">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/index.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="IT技术学习和记录">
+<meta property="og:description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
+
+1、自定义Theme
+
+&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
+<meta property="og:updated_time" content="2016-10-03T06:19:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自由的程序员">
-<meta name="twitter:description" content="IT技术学习和记录">
+<meta name="twitter:title" content="Android-避免App启动黑白屏闪现的2种方式">
+<meta name="twitter:description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
+
+1、自定义Theme
+
+&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
     
 
     
@@ -123,173 +138,130 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">开发知识</em>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Other/">Other</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
+                            <article id="post-Android-避免App启动黑白屏闪现的2种方式" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Android-避免App启动黑白屏闪现的2种方式
+        </h1>
+    
 
-    
-    
+            </header>
         
         
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            <div class="article-subtitle">
+                <a href="/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/" class="article-date">
+    <time datetime="2016-10-03T06:16:53.000Z" itemprop="datePublished">2016-10-03</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li></ul>
+
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-10-03T06:16:53.000Z" itemprop="datePublished">2016-10-03</time></p>
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。</p>
+<blockquote>
+<p>1、自定义Theme</p>
+</blockquote>
+<pre><code>&lt;style name=&quot;Theme.AppStartLoad&quot; parent=&quot;android:Theme&quot;&gt;    
+    &lt;item name=&quot;android:windowBackground&quot;&gt;@drawable/ic_splash&lt;/item&gt;    
+    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;    
+&lt;/style&gt; 
+</code></pre><blockquote>
+<p>2、设置透明Theme</p>
+</blockquote>
+<pre><code>&lt;style name=&quot;Theme.AppStartLoadTranslucent&quot; parent=&quot;android:Theme&quot;&gt;    
+    &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;   
+    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;    
+&lt;/style&gt; 
+</code></pre>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/">Android-避免App启动黑白屏闪现的2种方式</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
-
-1、自定义Theme
-
-&lt;style name=&quot;Theme.AppStartLoad&quot; 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/">Android-使用Intent打开各种文件</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
+        <footer class="article-footer">
             
-1、打开Html文件
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&q
-        </p>
+
+
+    <a data-url="https://sword30021.github.io/blog/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/" data-id="cittp2dfl000d8z8s3x5wt9hp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
 
+    <section id="comments">
     
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T07:40:52.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-EditText属性大全/">Android-EditText属性大全</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-EditText继承关系：View–&gt;TextView–&gt;EditText
-
-EditText的属性很多，这里介绍几个：
-
-android:hint=”请输入数字！”
-
-设置显示在空间上的提示信息
-
-android:numeric=”integer”
-
-设置只能输入整数，如果是小数则是：decimal
-
-android:singleLine=”true”
-
-设置单行输入，一旦设置为t
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
 
     
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T06:15:02.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/">Android-res/raw/assets存放资源的限制和读取方式</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-res/raw和assets的相同点
-
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
-
-res/raw和assets的不同点
-
-
-res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
-res/raw文件下不可
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
-
-
+    </section>
 
                         </div>
                     </section>
@@ -349,6 +321,19 @@ res/raw文件下不可
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/2016/10/03/常用正则表达式收集-持续更新/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">常用正则表达式收集(持续更新)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -491,11 +476,13 @@ res/raw文件下不可
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
