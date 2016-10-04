@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     
-    <title>标签：: Android_Intent | 自由的程序员</title>
+    <title>标签：: Android_string | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description" content="IT技术学习和记录">
 <meta property="og:type" content="website">
 <meta property="og:title" content="自由的程序员">
-<meta property="og:url" content="https://sword30021.github.io/blog/tags/Android-Intent/index.html">
+<meta property="og:url" content="https://sword30021.github.io/blog/tags/Android-string/index.html">
 <meta property="og:site_name" content="自由的程序员">
 <meta property="og:description" content="IT技术学习和记录">
 <meta name="twitter:card" content="summary">
@@ -123,7 +123,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>Android_Intent</em>
+    <i class="icon fa fa-tag"></i>标签：: <em>Android_string</em>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -150,21 +150,24 @@
             <p class="category">
             <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
             </p>
-            <p class="date"><time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time></p>
+            <p class="date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/">Android-使用Intent打开各种文件</a>
+        <a href="/blog/2016/10/04/Android-string-xml动态替换文本/">Android-string.xml动态替换文本</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-1、打开Html文件
+需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&q
+在string.xml中定义：
+&lt;string name=&quot;demo&quot;&gt;我是做%1$s开发的，工作%2$d了。&lt;/string&gt;
+在程序中使用：
+String input = getResources().getString(R.string.demo);
+
         </p>
     </div>
 </article>

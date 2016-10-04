@@ -3,18 +3,36 @@
 <head>
     <meta charset="utf-8">
     
-    <title>标签：: Android_Intent | 自由的程序员</title>
+    <title>Android-string.xml动态替换文本 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="IT技术学习和记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="自由的程序员">
-<meta property="og:url" content="https://sword30021.github.io/blog/tags/Android-Intent/index.html">
+        <meta name="keywords" content="Android,Android_string" />
+    
+    <meta name="description" content="需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。
+
+在string.xml中定义：
+&amp;lt;string name=&amp;quot;demo&amp;quot;&amp;gt;我是做%1$s开发的，工作%2$d了。&amp;lt;/string&amp;gt;
+在程序中使用：
+String input = getResources().getString(R.string.demo);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android-string.xml动态替换文本">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/04/Android-string-xml动态替换文本/index.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="IT技术学习和记录">
+<meta property="og:description" content="需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。
+
+在string.xml中定义：
+&amp;lt;string name=&amp;quot;demo&amp;quot;&amp;gt;我是做%1$s开发的，工作%2$d了。&amp;lt;/string&amp;gt;
+在程序中使用：
+String input = getResources().getString(R.string.demo);">
+<meta property="og:updated_time" content="2016-10-04T15:20:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自由的程序员">
-<meta name="twitter:description" content="IT技术学习和记录">
+<meta name="twitter:title" content="Android-string.xml动态替换文本">
+<meta name="twitter:description" content="需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。
+
+在string.xml中定义：
+&amp;lt;string name=&amp;quot;demo&amp;quot;&amp;gt;我是做%1$s开发的，工作%2$d了。&amp;lt;/string&amp;gt;
+在程序中使用：
+String input = getResources().getString(R.string.demo);">
     
 
     
@@ -123,59 +141,128 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>Android_Intent</em>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Other/">Other</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Android-string-xml动态替换文本" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a>
-            </p>
-            <p class="date"><time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/">Android-使用Intent打开各种文件</a>
+        Android-string.xml动态替换文本
         </h1>
     
 
-        <p class="article-excerpt">
-            
-1、打开Html文件
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="article-date">
+    <time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-string/">Android_string</a></li></ul>
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&q
-        </p>
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote>
+<p>需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。</p>
+</blockquote>
+<p>在string.xml中定义：</p>
+<pre><code>&lt;string name=&quot;demo&quot;&gt;我是做%1$s开发的，工作%2$d了。&lt;/string&gt;
+</code></pre><p>在程序中使用：</p>
+<pre><code>String input = getResources().getString(R.string.demo);
+String ouput = String.format(input, &quot;Android&quot;, 3);
+</code></pre><p>输入出结果：我是做Android开发的，工作3年了。</p>
+<blockquote>
+<p>解释：</p>
+</blockquote>
+<p>%1$s：1是指位置1，小写s是指定替换类型为字符串。<br>%2$d：2是指位置2，小写d是指定替换类型为整数。<br>其他的类似，灵活运用即可。</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://sword30021.github.io/blog/blog/2016/10/04/Android-string-xml动态替换文本/" data-id="citvmtfl10005zl8sd15uxo1z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -235,6 +322,19 @@ public static Intent getHtmlFileIntent( String param )  {
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Android-adb常用命令整理(持续更新)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -377,11 +477,13 @@ public static Intent getHtmlFileIntent( String param )  {
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/04/Android-string-xml动态替换文本/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
