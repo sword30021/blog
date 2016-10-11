@@ -26,7 +26,7 @@ $ git clone &amp;lt;版本库的网址&amp;gt;
 该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。
 $ git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt;
 git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git">
-<meta property="og:updated_time" content="2016-10-02T08:34:21.000Z">
+<meta property="og:updated_time" content="2016-10-11T01:29:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git-命令行常用命令集锦(持续更新)">
 <meta name="twitter:description" content="1、git clone
@@ -266,6 +266,12 @@ $ git push origin --delete master
 </code></pre><p>上面命令表示删除origin主机的master分支。<br>如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。</p>
 <pre><code>$ git push origin
 </code></pre><p>上面命令表示，将当前分支推送到origin主机的对应分支。<br>如果当前分支只有一个追踪分支，那么主机名都可以省略。</p>
+<p>如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，那么可以这么做。</p>
+<pre><code>$ git push origin test:master    // 提交本地test分支作为远程的master分支
+$ git push origin test:test      // 提交本地test分支作为远程的test分支
+</code></pre><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p>
+<pre><code>$ git push origin :test   
+</code></pre><p>刚提交到远程的test将被删除，但是本地还会保存的，不用担心</p>
 <pre><code>$ git push
 </code></pre><p>如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push。</p>
 <pre><code>$ git push -u origin master
@@ -1088,7 +1094,7 @@ $ git clean -nfd   # list all files/directories that would be removed
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="citwlkdkt004b8b8scubetcx7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" data-id="ciu4t9675000y3b8sagye6xzj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
