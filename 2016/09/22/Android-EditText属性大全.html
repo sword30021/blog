@@ -3,30 +3,63 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Android-使用Intent打开各种文件 | 自由的程序员</title>
+    <title>Android-EditText属性大全 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android,Android_Intent" />
+        <meta name="keywords" content="Android,Android_EditText" />
     
-    <meta name="description" content="1、打开Html文件
+    <meta name="description" content="EditText继承关系：View–&amp;gt;TextView–&amp;gt;EditText
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
+EditText的属性很多，这里介绍几个：
+
+android:hint=”请输入数字！”
+
+设置显示在空间上的提示信息
+
+android:numeric=”integer”
+
+设置只能输入整数，如果是小数则是：decimal
+
+android:singleLine=”true”
+
+设置单行输入，一旦设置为t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android-使用Intent打开各种文件">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-使用Intent打开各种文件/index.html">
+<meta property="og:title" content="Android-EditText属性大全">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-EditText属性大全.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="1、打开Html文件
+<meta property="og:description" content="EditText继承关系：View–&amp;gt;TextView–&amp;gt;EditText
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
-<meta property="og:updated_time" content="2016-10-05T07:08:59.000Z">
+EditText的属性很多，这里介绍几个：
+
+android:hint=”请输入数字！”
+
+设置显示在空间上的提示信息
+
+android:numeric=”integer”
+
+设置只能输入整数，如果是小数则是：decimal
+
+android:singleLine=”true”
+
+设置单行输入，一旦设置为t">
+<meta property="og:updated_time" content="2016-10-04T00:58:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android-使用Intent打开各种文件">
-<meta name="twitter:description" content="1、打开Html文件
+<meta name="twitter:title" content="Android-EditText属性大全">
+<meta name="twitter:description" content="EditText继承关系：View–&amp;gt;TextView–&amp;gt;EditText
 
-public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
+EditText的属性很多，这里介绍几个：
+
+android:hint=”请输入数字！”
+
+设置显示在空间上的提示信息
+
+android:numeric=”integer”
+
+设置只能输入整数，如果是小数则是：decimal
+
+android:singleLine=”true”
+
+设置单行输入，一旦设置为t">
     
 
     
@@ -135,18 +168,18 @@ public static Intent getHtmlFileIntent( String param )  {
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Other/">Other</a>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Android控件/">Android控件</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Android-使用Intent打开各种文件" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-EditText属性大全" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Android-使用Intent打开各种文件
+        Android-EditText属性大全
         </h1>
     
 
@@ -154,137 +187,327 @@ public static Intent getHtmlFileIntent( String param )  {
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/09/22/Android-使用Intent打开各种文件/" class="article-date">
-    <time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time>
+                <a href="/blog/2016/09/22/Android-EditText属性大全.html" class="article-date">
+    <time datetime="2016-09-22T07:40:52.000Z" itemprop="datePublished">2016-09-22</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-Intent/">Android_Intent</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-EditText/">Android_EditText</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
-<p>1、打开Html文件</p>
+<p>EditText继承关系：View–&gt;TextView–&gt;EditText</p>
 </blockquote>
-<pre><code>public static Intent getHtmlFileIntent( String param )  {   
-     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&quot;).encodedPath(param ).build();    
-     Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);   
-     intent.setDataAndType(uri, &quot;text/html&quot;);    
-     return intent;  
-}
-</code></pre><blockquote>
-<p>2、打开图片文件</p>
+<p>EditText的属性很多，这里介绍几个：</p>
+<blockquote>
+<p>android:hint=”请输入数字！”</p>
 </blockquote>
-<pre><code>public static Intent getImageFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;image/*&quot;);    
-    return intent;  
-}
-</code></pre><blockquote>
-<p>3、打开pdf文件</p>
+<p>设置显示在空间上的提示信息</p>
+<blockquote>
+<p>android:numeric=”integer”</p>
 </blockquote>
-<pre><code>public static Intent getPdfFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;application/pdf&quot;);    
-    return intent; 
-}
-</code></pre><blockquote>
-<p>4、打开txt文件</p>
+<p>设置只能输入整数，如果是小数则是：decimal</p>
+<blockquote>
+<p>android:singleLine=”true”</p>
 </blockquote>
-<pre><code>public static Intent getTextFileIntent( String paramString, boolean paramBoolean) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-    if (paramBoolean) {      
-        Uri uri1 = Uri.parse(param );      
-        intent.setDataAndType(uri1, &quot;text/plain&quot;);    
-    }   
-    while (true) {      
-        return intent;      
-        Uri uri2 = Uri.fromFile(new File(param ));     
-        intent.setDataAndType(uri2, &quot;text/plain&quot;);    
-    }  
-}
-</code></pre><blockquote>
-<p>5、打开音频文件</p>
+<p>设置单行输入，一旦设置为true，则文字不会自动换行。</p>
+<blockquote>
+<p>android:password=”true”</p>
 </blockquote>
-<pre><code>public static Intent getAudioFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    
-    intent.putExtra(&quot;oneshot&quot;, 0);    
-    intent.putExtra(&quot;configchange&quot;, 0);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;audio/*&quot;);    
-    return intent;  
-}
-</code></pre><blockquote>
-<p>6、打开视频文件</p>
+<p>设置只能输入密码</p>
+<blockquote>
+<p>android:textColor = “#ff8c00”</p>
 </blockquote>
-<pre><code>public static Intent getVideoFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    
-    intent.putExtra(&quot;oneshot&quot;, 0);    
-    intent.putExtra(&quot;configchange&quot;, 0);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;video/*&quot;);    
-    return intent;  
-}
-</code></pre><blockquote>
-<p>7、打开chm文件</p>
+<p>字体颜色</p>
+<blockquote>
+<p>android:textStyle=”bold”</p>
 </blockquote>
-<pre><code>public static Intent getChmFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;application/x-chm&quot;);    
-    return intent;  
-}
-</code></pre><blockquote>
-<p>8、打开word文件</p>
+<p>字体，bold, italic, bolditalic</p>
+<blockquote>
+<p>android:textSize=”20dip”</p>
 </blockquote>
-<pre><code>public static Intent getWordFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;application/msword&quot;);    
-    return intent;  
-}
-</code></pre><blockquote>
-<p>9、打开Excel文件</p>
+<p>大小</p>
+<blockquote>
+<p>android:capitalize = “characters”</p>
 </blockquote>
-<pre><code>public static Intent getExcelFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;application/vnd.ms-excel&quot;);    
-    return intent;  
-</code></pre><p>}</p>
-<p>10、打开ppt文件</p>
-<pre><code>public static Intent getPptFileIntent( String param ) {    
-    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
-    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-    Uri uri = Uri.fromFile(new File(param ));    
-    intent.setDataAndType(uri, &quot;application/vnd.ms-powerpoint&quot;);    
-    return intent;  
-}
-</code></pre><blockquote>
+<p>以大写字母写</p>
+<blockquote>
+<p>android:textAlign=”center”</p>
+</blockquote>
+<p>EditText没有这个属性，但TextView有，居中&gt;android:textColorHighlight=”#cccccc”</p>
+<p>被选中文字的底色，默认为蓝色</p>
+<blockquote>
+<p>android:textColorHint=”#ffff00”</p>
+</blockquote>
+<p>设置提示信息文字的颜色，默认为灰色</p>
+<blockquote>
+<p>android:textScaleX=”1.5”</p>
+</blockquote>
+<p>控制字与字之间的间距</p>
+<blockquote>
+<p>android:typeface=”monospace”</p>
+</blockquote>
+<p>字型，normal, sans, serif, monospace</p>
+<blockquote>
+<p>android:background=”@null”</p>
+</blockquote>
+<p>背景，这里没有，指透明</p>
+<blockquote>
+<p>android:layout_weight=”1”</p>
+</blockquote>
+<p>权重，控制控件之间的地位,在控制控件显示的大小时蛮有用的。</p>
+<blockquote>
+<p>android:textAppearance=”?android:attr/textAppearanceLargeInverse”</p>
+</blockquote>
+<p>文字外观</p>
+<blockquote>
+<p>android:layout_gravity=”center_vertical”</p>
+</blockquote>
+<p>设置控件显示的位置：默认top，这里居中显示</p>
+<blockquote>
+<p>bottomandroid:gray=”top”</p>
+</blockquote>
+<p>多行中指针在第一行第一位置</p>
+<blockquote>
+<p>et.setSelection(et.length());</p>
+</blockquote>
+<p>调整光标到最后一行</p>
+<blockquote>
+<p>android:autoText</p>
+</blockquote>
+<p>自动拼写帮助</p>
+<blockquote>
+<p>android:capitalize</p>
+</blockquote>
+<p>首字母大写</p>
+<blockquote>
+<p>android:digits</p>
+</blockquote>
+<p>设置只接受某些数字</p>
+<blockquote>
+<p>android:singleLine</p>
+</blockquote>
+<p>是否单行或者多行，回车是离开文本框还是文本框增加新行</p>
+<blockquote>
+<p>android:numeric</p>
+</blockquote>
+<p>只接受数字</p>
+<blockquote>
+<p>android:phoneNumber</p>
+</blockquote>
+<p>输入电话号码</p>
+<blockquote>
+<p>android:editable</p>
+</blockquote>
+<p>是否可编辑</p>
+<blockquote>
+<p>android:autoLink=”all”</p>
+</blockquote>
+<p>设置文本超链接样式当点击网址时，跳向该网址 </p>
+<blockquote>
+<p>android:textAppearance=”?android:attr/textAppearanceLargeInverse”</p>
+</blockquote>
+<p>文字外观，这里引用的系统自带的一个外观，？表示系统是否有这种外观，否则使用默认的外观，可设置的值如下：<br>textAppearanceButton/textAppearanceInverse/textAppearanceLarge/textAppearanceLargeInverse/textAppearanceMedium/textAppearanceMediumInverse。</p>
+<blockquote>
+<p>android:autoLink</p>
+</blockquote>
+<p>设置是否当文本为URL链接/email/电话号码/map时，文本显示为可点击的链接。可选值(none/web/email/phone/map/all)　　</p>
+<blockquote>
+<p>android:autoText</p>
+</blockquote>
+<p>如果设置，将自动执行输入值的拼写纠正。此处无效果，在显示输入法并输入的时候起作用。　　</p>
+<blockquote>
+<p>android:bufferType</p>
+</blockquote>
+<p>指定getText()方式取得的文本类别。选项editable 类似于StringBuilder可追加字符，也就是说getText后可调用append方法设置文本内容。spannable 则可在给定的字符区域使用样式。　</p>
+<blockquote>
+<p>android:capitalize</p>
+</blockquote>
+<p>设置英文字母大写类型。此处无效果，需要弹出输入法才能看得到。　　</p>
+<blockquote>
+<p>android:cursorVisible</p>
+</blockquote>
+<p>设定光标为显示/隐藏，默认显示。　　</p>
+<blockquote>
+<p>android:digits</p>
+</blockquote>
+<p>设置允许输入哪些字符。如“1234567890.+-*/% ()”　</p>
+<blockquote>
+<p>android:drawableBottom</p>
+</blockquote>
+<p>在text的下方输出一个drawable，如图片。如果指定一个颜色的话会把text的背景设为该颜色，并且同时和background使用时覆盖后者。　　</p>
+<blockquote>
+<p>android:drawableLeft</p>
+</blockquote>
+<p>在text的左边输出一个drawable，如图片。　　</p>
+<blockquote>
+<p>android:drawablePadding</p>
+</blockquote>
+<p>设置text与drawable(图片)的间隔，与drawableLeft、drawableRight、drawableTop、drawableBottom一起使用，可设置为负数，单独使用没有效果。 </p>
+<blockquote>
+<p>android:drawableRight</p>
+</blockquote>
+<p>在text的右边输出一个drawable，如图片。</p>
+<blockquote>
+<p>android:drawableTop</p>
+</blockquote>
+<p>在text的正上方输出一个drawable，如图片。</p>
+<blockquote>
+<p>android:ellipsize</p>
+</blockquote>
+<p>设置当文字过长时,该控件该如何显示。有如下值设置：<br>”start”—?省略号显示在开头;<br>”end”——省略号显示在结尾;<br>”middle”—-省略号显示在中间;<br>”marquee” ——以跑马灯的方式显示(动画横向移动);</p>
+<blockquote>
+<p>android:freezesText</p>
+</blockquote>
+<p>设置保存文本的内容以及光标的位置。</p>
+<blockquote>
+<p>android:gravity</p>
+</blockquote>
+<p>设置文本位置，如设置成“center”，文本将居中显示。</p>
+<blockquote>
+<p>android:hintText</p>
+</blockquote>
+<p>为空时显示的文字提示信息，可通过textColorHint设置提示信息的颜色。此属性在EditView中使用，但是这里也可以用。</p>
+<blockquote>
+<p>android:imeOptions</p>
+</blockquote>
+<p>附加功能，设置右下角IME动作与编辑框相关的动作，如actionDone右下角将显示一个“完成”，而不设置默认是一个回车符号。</p>
+<blockquote>
+<p>android:imeActionId</p>
+</blockquote>
+<p>设置IME动作ID。</p>
+<blockquote>
+<p>android:imeActionLabel</p>
+</blockquote>
+<p>设置IME动作标签。　　</p>
+<blockquote>
+<p>android:includeFontPadding</p>
+</blockquote>
+<p>设置文本是否包含顶部和底部额外空白，默认为true。　　</p>
+<blockquote>
+<p>android:inputMethod</p>
+</blockquote>
+<p>为文本指定输入法，需要完全限定名(完整的包名)。例如：<br>com.google.android.inputmethod.pinyin　</p>
+<blockquote>
+<p>android:inputType</p>
+</blockquote>
+<p>设置文本的类型，用于帮助输入法显示合适的键盘类型。　　</p>
+<blockquote>
+<p>android:linksClickable</p>
+</blockquote>
+<p>设置链接是否点击连接，即使设置了autoLink。　　</p>
+<blockquote>
+<p>android:marqueeRepeatLimit</p>
+</blockquote>
+<p>在ellipsize指定marquee的情况下，设置重复滚动的次数，当设置为marquee_forever时表示无限次。　　</p>
+<blockquote>
+<p>android:ems</p>
+</blockquote>
+<p>设置TextView的宽度为N个字符的宽度。这里测试为一个汉字字符宽度，android:maxEms设置TextView的宽度为最长为N个字符的宽度。与ems同时使用时覆盖ems选项。android:minEms设置TextView的宽度为最短为N个字符的宽度。与ems同时使用时覆盖ems选项。　　</p>
+<blockquote>
+<p>android:maxLength</p>
+</blockquote>
+<p>限制显示的文本长度，超出部分不显示。　　</p>
+<blockquote>
+<p>android:lines</p>
+</blockquote>
+<p>设置文本的行数，设置两行就显示两行，即使第二行没有数据。　　</p>
+<blockquote>
+<p>android:maxLines</p>
+</blockquote>
+<p>设置文本的最大显示行数，与width或者layout_width结合使用，超出部分自动换行，超出行数将不显示。　　</p>
+<blockquote>
+<p>android:minLines</p>
+</blockquote>
+<p>设置文本的最小行数，与lines类似。　　</p>
+<blockquote>
+<p>android:lineSpacingExtra</p>
+</blockquote>
+<p>设置行间距。　　</p>
+<blockquote>
+<p>android:lineSpacingMultiplier</p>
+</blockquote>
+<p>设置行间距的倍数。如”1.2”　　</p>
+<blockquote>
+<p>android:numeric</p>
+</blockquote>
+<p>如果被设置，该TextView有一个数字输入法。　　</p>
+<blockquote>
+<p>android:password</p>
+</blockquote>
+<p>以小点”.”显示文本　　</p>
+<blockquote>
+<p>android:phoneNumber</p>
+</blockquote>
+<p>设置为电话号码的输入方式。　　</p>
+<blockquote>
+<p>android:scrollHorizontally</p>
+</blockquote>
+<p>设置文本超出TextView的宽度的情况下，是否出现横拉条。　　</p>
+<blockquote>
+<p>android:selectAllOnFocus</p>
+</blockquote>
+<p>如果文本是可选择的，让他获取焦点而不是将光标移动为文本的开始位置或者末尾位置。　　</p>
+<blockquote>
+<p>android:shadowColor</p>
+</blockquote>
+<p>指定文本阴影的颜色，需要与shadowRadius一起使用。</p>
+<blockquote>
+<p>android:shadowDx</p>
+</blockquote>
+<p>设置阴影横向坐标开始位置。　　</p>
+<blockquote>
+<p>android:shadowDy</p>
+</blockquote>
+<p>设置阴影纵向坐标开始位置。　　</p>
+<blockquote>
+<p>android:shadowRadius</p>
+</blockquote>
+<p>设置阴影的半径。设置为0.1就变成字体的颜色了，一般设置为3.0的效果比较好。　　</p>
+<blockquote>
+<p>android:singleLine</p>
+</blockquote>
+<p>设置单行显示。如果和layout<em>width一起使用，当文本不能全部显示时，后面用“…”来表示。如android:text=”test</em> singleLine “，android:singleLine=”true” android:layout_width=”20dp”将只显示“t…”。如果不设置singleLine或者设置为false，文本将自动换行android:shadowDx设置阴影横向坐标开始位置。　　</p>
+<blockquote>
+<p>android:shadowDy</p>
+</blockquote>
+<p>设置阴影纵向坐标开始位置。　　　　</p>
+<blockquote>
+<p>android:typeface</p>
+</blockquote>
+<p>设置文本字体，必须是以下常量值之一：normal 0, sans 1, serif 2, monospace(等宽字体) 3]　　</p>
+<blockquote>
+<p>android:height</p>
+</blockquote>
+<p>设置文本区域的高度，支持度量单位：px(像素)/dp/sp/in/mm(毫米)　　</p>
+<blockquote>
+<p>android:maxHeight</p>
+</blockquote>
+<p>设置文本区域的最大高度　　</p>
+<blockquote>
+<p>android:minHeight</p>
+</blockquote>
+<p>设置文本区域的最小高度　　</p>
+<blockquote>
+<p>android:width</p>
+</blockquote>
+<p>设置文本区域的宽度，支持度量单位：px(像素)/dp/sp/in/mm(毫米)，与layout_width的区别看这里。　　</p>
+<blockquote>
+<p>android:maxWidth</p>
+</blockquote>
+<p>设置文本区域的最大宽度　　</p>
+<blockquote>
+<p>android:minWidth</p>
+</blockquote>
+<p>设置文本区域的最小宽度　</p>
+<blockquote>
 <p>Ps：参考资料</p>
 </blockquote>
 <ol>
-<li><a href="http://blog.csdn.net/u012702547/article/details/50178429" target="_blank" rel="external">关于Intent的七大属性</a></li>
-<li><a href="http://blog.csdn.net/iispring/article/details/48417779" target="_blank" rel="external">Android中Intent概述及使用</a></li>
-<li><a href="http://blog.csdn.net/sunboy_2050/article/details/8242471" target="_blank" rel="external">Android Intent Action 大全</a></li>
+<li><a href="http://blog.csdn.net/android_cmos/article/details/51167753" target="_blank" rel="external">Android中TextView和EditView常用属性设置</a></li>
+<li><a href="http://www.cnblogs.com/fuly550871915/p/4977739.html" target="_blank" rel="external">关于EditText的一点深入的了解</a></li>
 </ol>
 
         </div>
@@ -293,7 +516,7 @@ public static Intent getHtmlFileIntent( String param )  {
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-使用Intent打开各种文件/" data-id="ciu4t9664000d3b8sloaumhwv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-EditText属性大全.html" data-id="cium2vw8800000n8sztarw5kc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -429,20 +652,20 @@ public static Intent getHtmlFileIntent( String param )  {
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/09/22/Android-Studio常用插件列表-持续更新/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Android Studio常用插件列表(持续更新...)
+            Android-使用Intent打开各种文件
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/blog/2016/09/22/Android-EditText属性大全/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Android-EditText属性大全</p>
+        <p class="article-nav-title">Android-res/raw/assets存放资源的限制和读取方式</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -462,7 +685,7 @@ public static Intent getHtmlFileIntent( String param )  {
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -471,7 +694,7 @@ public static Intent getHtmlFileIntent( String param )  {
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -480,7 +703,7 @@ public static Intent getHtmlFileIntent( String param )  {
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -489,7 +712,7 @@ public static Intent getHtmlFileIntent( String param )  {
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -498,7 +721,7 @@ public static Intent getHtmlFileIntent( String param )  {
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -590,7 +813,7 @@ public static Intent getHtmlFileIntent( String param )  {
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Android-使用Intent打开各种文件/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Android-EditText属性大全.html';
     
     (function() {
     var dsq = document.createElement('script');

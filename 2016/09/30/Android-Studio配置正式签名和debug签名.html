@@ -3,39 +3,36 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Mac上安装Homebrew及常用命令 | 自由的程序员</title>
+    <title>Android Studio配置正式签名和debug签名 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Mac" />
+        <meta name="keywords" content="Android,Android_tools" />
     
-    <meta name="description" content="Homebrew简称brew 。
+    <meta name="description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
 
-是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 使用命令，非常方便。
-
-安装Homebrew
-
-在Mac中打开Termal:  输入命令：ruby -e “$(curl –insecure -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install">
+在主工程(一般都是app)下的build.gradle里，配置2个签名：
+signingConfigs {  
+    release {  
+      keyAlias &amp;apos;###&amp;apos;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac上安装Homebrew及常用命令">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Mac上安装Homebrew及常用命令/index.html">
+<meta property="og:title" content="Android Studio配置正式签名和debug签名">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/30/Android-Studio配置正式签名和debug签名.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="Homebrew简称brew 。
+<meta property="og:description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
 
-是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 使用命令，非常方便。
-
-安装Homebrew
-
-在Mac中打开Termal:  输入命令：ruby -e “$(curl –insecure -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install">
-<meta property="og:updated_time" content="2016-09-28T08:08:37.000Z">
+在主工程(一般都是app)下的build.gradle里，配置2个签名：
+signingConfigs {  
+    release {  
+      keyAlias &amp;apos;###&amp;apos;">
+<meta property="og:updated_time" content="2016-10-02T08:55:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac上安装Homebrew及常用命令">
-<meta name="twitter:description" content="Homebrew简称brew 。
+<meta name="twitter:title" content="Android Studio配置正式签名和debug签名">
+<meta name="twitter:description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
 
-是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 使用命令，非常方便。
-
-安装Homebrew
-
-在Mac中打开Termal:  输入命令：ruby -e “$(curl –insecure -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install">
+在主工程(一般都是app)下的build.gradle里，配置2个签名：
+signingConfigs {  
+    release {  
+      keyAlias &amp;apos;###&amp;apos;">
     
 
     
@@ -144,18 +141,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/Mac/">Mac</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Mac/Mac使用/">Mac使用</a>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/">开发工具</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/Android-Studio/">Android Studio</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Mac上安装Homebrew及常用命令" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-Studio配置正式签名和debug签名" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Mac上安装Homebrew及常用命令
+        Android Studio配置正式签名和debug签名
         </h1>
     
 
@@ -163,53 +160,69 @@
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/09/22/Mac上安装Homebrew及常用命令/" class="article-date">
-    <time datetime="2016-09-22T08:33:08.000Z" itemprop="datePublished">2016-09-22</time>
+                <a href="/blog/2016/09/30/Android-Studio配置正式签名和debug签名.html" class="article-date">
+    <time datetime="2016-09-30T09:18:24.000Z" itemprop="datePublished">2016-09-30</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Mac/">Mac</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-tools/">Android_tools</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
-<p>Homebrew简称brew 。</p>
+<p>需求：<br>如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。</p>
 </blockquote>
-<p>是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 使用命令，非常方便。</p>
-<blockquote>
-<p>安装Homebrew</p>
-</blockquote>
-<p>在Mac中打开Termal:  输入命令：<br>ruby -e “$(curl –insecure -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
-<blockquote>
-<p>使用brew安装软件</p>
-</blockquote>
-<p>比如安装git：<br>    brew install git</p>
-<blockquote>
-<p>使用brew卸载软件</p>
-</blockquote>
-<pre><code>brew uninstall git
-</code></pre><blockquote>
-<p>使用brew查询软件</p>
-</blockquote>
-<pre><code>brew search /gi*/
-</code></pre><p>/gi*/是个正在表达式。</p>
-<blockquote>
-<p>其他brew命令</p>
-</blockquote>
-<p>brew list：列出已安装的软件</p>
-<p>brew update：更新brew</p>
-<p>brew home：用浏览器打开brew的官方网站</p>
-<p>brew info：显示软件信息</p>
-<p>brew deps：显示包依赖</p>
-
+<p>在主工程(一般都是app)下的build.gradle里，配置2个签名：</p>
+<pre><code>signingConfigs {  
+    release {  
+      keyAlias &apos;###&apos;  
+      keyPassword &apos;******&apos;  
+      storeFile file(&apos;../###.jks&apos;)  
+      storePassword &apos;******&apos;  
+    }  
+    debug {  
+      keyAlias &apos;androiddebugkey&apos;  
+      keyPassword &apos;android&apos;  
+      storeFile file(&apos;./debug.keystore&apos;)  
+      storePassword &apos;android&apos;  
+}
+buildTypes {       
+    debug {           
+      signingConfig signingConfigs.release       
+    }       
+    release {           
+      signingConfig signingConfigs.release       
+    }   
+  }
+</code></pre><p>其中keyAlias是签名的别名，keyPassword是签名密码，storeFile file是签名文件所在文件夹位置，这里是放在和app同级目录下。<br>到这里就可以，但是为了保护签名信息，可以优化处理：<br>在项目根目录下的gradle.properties文件中添加：</p>
+<pre><code>RELEASE_KEY_PASSWORD=****** //签名密码  
+RELEASE_KEY_ALIAS=****** //签名别名  
+RELEASE_STORE_PASSWORD=****** //store密码  
+RELEASE_STORE_FILE=***.jks //签名文件地址 
+</code></pre><p>然后修改之前的配置：</p>
+<pre><code>signingConfigs {  
+    release {  
+        keyAlias RELEASE_KEY_ALIAS  
+        keyPassword RELEASE_KEY_PASSWORD  
+        storeFile file(RELEASE_STORE_FILE)  
+        storePassword RELEASE_STORE_PASSWORD  
+    }  
+    config {  
+        keyAlias &apos;androiddebugkey&apos;  
+        keyPassword &apos;android&apos;  
+        storeFile file(&apos;./debug.keystore&apos;)  
+        storePassword &apos;android&apos;  
+    }  
+} 
+</code></pre>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Mac上安装Homebrew及常用命令/" data-id="ciu4t966e000k3b8s67yfv2cr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名.html" data-id="cium2vw9800090n8sg4dk4im1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -345,20 +358,20 @@
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/09/22/Mac上如何完全删除node-js/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/10/03/常用正则表达式收集-持续更新.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Mac上如何完全删除node.js
+            常用正则表达式收集(持续更新)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/blog/2016/09/22/常用Atom插件列表（持续更新-）/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/2016/09/26/git-命令行常用命令集锦-持续更新.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">常用Atom插件列表（持续更新...）</p>
+        <p class="article-nav-title">git-命令行常用命令集锦(持续更新)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -378,7 +391,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -387,7 +400,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -396,7 +409,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -405,7 +418,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -414,7 +427,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -506,7 +519,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Mac上安装Homebrew及常用命令/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名.html';
     
     (function() {
     var dsq = document.createElement('script');

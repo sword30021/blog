@@ -3,51 +3,45 @@
 <head>
     <meta charset="utf-8">
     
-    <title>svn-命令行常用命令集锦(持续更新) | 自由的程序员</title>
+    <title>Android-res/raw/assets存放资源的限制和读取方式 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="svn" />
+        <meta name="keywords" content="Android,Android_Resource" />
     
-    <meta name="description" content="1、将文件checkout到本地目录   
+    <meta name="description" content="res/raw和assets的相同点
 
-svn checkout path（path是服务器上的目录）简写：svn co 
+两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 
-2、往版本库中添加新的文件   
+res/raw和assets的不同点
 
-svn add file（file是文件名称）svn add *.java(添加当前目录下所有的java文件) 
 
-3、将改动的文件提交到版本库   
-
-svn commit -m “your content”简写：svn c">
+res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
+res/raw文件下不可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="svn-命令行常用命令集锦(持续更新)">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/26/svn-命令行常用命令集锦-持续更新/index.html">
+<meta property="og:title" content="Android-res/raw/assets存放资源的限制和读取方式">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="1、将文件checkout到本地目录   
+<meta property="og:description" content="res/raw和assets的相同点
 
-svn checkout path（path是服务器上的目录）简写：svn co 
+两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 
-2、往版本库中添加新的文件   
+res/raw和assets的不同点
 
-svn add file（file是文件名称）svn add *.java(添加当前目录下所有的java文件) 
 
-3、将改动的文件提交到版本库   
-
-svn commit -m “your content”简写：svn c">
-<meta property="og:updated_time" content="2016-09-26T10:05:35.000Z">
+res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
+res/raw文件下不可">
+<meta property="og:updated_time" content="2016-09-22T08:07:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="svn-命令行常用命令集锦(持续更新)">
-<meta name="twitter:description" content="1、将文件checkout到本地目录   
+<meta name="twitter:title" content="Android-res/raw/assets存放资源的限制和读取方式">
+<meta name="twitter:description" content="res/raw和assets的相同点
 
-svn checkout path（path是服务器上的目录）简写：svn co 
+两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
 
-2、往版本库中添加新的文件   
+res/raw和assets的不同点
 
-svn add file（file是文件名称）svn add *.java(添加当前目录下所有的java文件) 
 
-3、将改动的文件提交到版本库   
-
-svn commit -m “your content”简写：svn c">
+res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
+res/raw文件下不可">
     
 
     
@@ -156,18 +150,18 @@ svn commit -m “your content”简写：svn c">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/版本控制/">版本控制</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/版本控制/svn/">svn</a>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Other/">Other</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-svn-命令行常用命令集锦-持续更新" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-res-raw-assets存放资源的限制和读取方式" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        svn-命令行常用命令集锦(持续更新)
+        Android-res/raw/assets存放资源的限制和读取方式
         </h1>
     
 
@@ -175,79 +169,42 @@ svn commit -m “your content”简写：svn c">
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/09/26/svn-命令行常用命令集锦-持续更新/" class="article-date">
-    <time datetime="2016-09-26T09:59:03.000Z" itemprop="datePublished">2016-09-26</time>
+                <a href="/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式.html" class="article-date">
+    <time datetime="2016-09-22T06:15:02.000Z" itemprop="datePublished">2016-09-22</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/svn/">svn</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-Resource/">Android_Resource</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
-<p>﻿﻿1、将文件checkout到本地目录   </p>
+<p>res/raw和assets的相同点</p>
 </blockquote>
-<p>svn checkout path（path是服务器上的目录）<br>简写：svn co </p>
+<p>两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。</p>
 <blockquote>
-<p>2、往版本库中添加新的文件   </p>
-</blockquote>
-<p>svn add file（file是文件名称）<br>svn add *.java(添加当前目录下所有的java文件) </p>
-<blockquote>
-<p>3、将改动的文件提交到版本库   </p>
-</blockquote>
-<p>svn commit -m “your content”<br>简写：svn ci </p>
-<blockquote>
-<p>4、加锁/解锁   </p>
-</blockquote>
-<p>svn lock -m “your content” [–force] PATH  </p>
-<blockquote>
-<p>5、更新到某个版本   </p>
-</blockquote>
-<p>svn update -r m path（m是要更新的版本号）<br>svn update如果后面没有目录，默认将当前目录以及子目录下的所有文件都更新到最新版本。<br>简写：svn up </p>
-<blockquote>
-<p>6、查看文件或者目录状态   </p>
+<p>res/raw和assets的不同点</p>
 </blockquote>
 <ol>
-<li>svn status path<br>目录下的文件和子目录的状态，正常状态不显示<br>状态说明：<br>?：不在svn的控制中；<br>M：内容被修改；<br>C：发生冲突；<br>A：预定加入到版本库；<br>K：被锁定  </li>
-<li>svn status -v path<br>显示文件和子目录状态，第一列保持相同，第二列显示工作版本号，第三和第四列显示最后一次修改的版本号和修改人。<br>注：svn status、svn diff和 svn revert这三条命令在没有网络的情况下也可以执行的，因为svn在本地的.svn中保留了本地版本的原始拷贝。  </li>
+<li>res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。</li>
+<li>res/raw文件下不可以新建目录结构，而assets则可以自定义目录结构，也就是assets目录下可以再建立文件夹。</li>
 </ol>
 <blockquote>
-<p>7、删除文件   </p>
+<p>读取文件资源</p>
 </blockquote>
-<p>svn delete path -m “your content”<br>简写：svn (del, remove, rm)  </p>
-<blockquote>
-<p>8、查看日志 </p>
+<p>1.读取res/raw下的文件资源，通过以下方式获取输入流来进行写操作:</p>
+<pre><code>InputStream is = getResources().openRawResource(R.id.filename); 
+</code></pre><p>2.读取assets下的文件资源，通过以下方式获取输入流来进行写操作:</p>
+<pre><code>AssetManager am = null ;
+am = getAssets();
+InputStream is = am.open(&quot;filename&quot;);
+</code></pre><p>3.获取assets下的文件列表</p>
+<pre><code>String[] files = getAssets().list(&quot;&quot;);
+</code></pre><blockquote>
+<p>Android 对asset与raw的限制</p>
 </blockquote>
-<p>svn log path  </p>
-<blockquote>
-<p>9、查看文件详细信息   </p>
-</blockquote>
-<p>svn info path   例如：svn info test.php </p>
-<blockquote>
-<p>10、比较差异   </p>
-</blockquote>
-<p>svn diff path(将修改的文件与基础版本比较)<br>svn diff -r m:n path(对版本m和版本n比较差异)<br>简写：svn di </p>
-<blockquote>
-<p>11、将两个版本之间的差异合并到当前文件   </p>
-</blockquote>
-<p>svn merge -r m:n path  </p>
-<blockquote>
-<p>12、SVN 帮助   </p>
-</blockquote>
-<p>svn help<br>svn help ci</p>
-<blockquote>
-<p>13、代码库URL变更     </p>
-</blockquote>
-<p>svn switch (sw): 更新工作副本至不同的URL。<br>用法：</p>
-<ol>
-<li>switch URL [PATH]<br>更新你的工作副本，映射到一个新的URL，其行为跟“svn update”很像，也会将服务器上文件与本地文件合并。这是将工作副本对应到同一仓库中某个分支或者标记的方法。                </li>
-<li>switch –relocate FROM TO [PATH…]<br>改写工作副本的URL元数据，以反映单纯的URL上的改变。当仓库的根URL变动比如方案名或是主机名称变动)，但是工作副本仍旧对映到同一仓库的同一目录时使用这个命令更新工作副本与仓库的对应关系。   </li>
-</ol>
-<blockquote>
-<p>14、解决冲突    </p>
-</blockquote>
-<p>svn resolved: 移除工作副本的目录或文件的“冲突”状态。<br>用法: resolved PATH…<br>注意: 本子命令不会依语法来解决冲突或是移除冲突标记；它只是移除冲突的相关文件，然后让 PATH 可以再次提交。</p>
+<p>在读取这两个资源文件夹中的文件时会有一定的限制，即单个文件大小不能超过1M ，如果读取超过1M的文件会报 “Data exceeds UNCOMPRESS_DATA_MAX (1314625 vs 1048576)” 的IOException。</p>
 
         </div>
         <footer class="article-footer">
@@ -255,7 +212,7 @@ svn commit -m “your content”简写：svn c">
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/26/svn-命令行常用命令集锦-持续更新/" data-id="ciu4t967c00133b8s5b5ghea3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式.html" data-id="cium2vw8q00050n8smxm0yy27" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -391,22 +348,16 @@ svn commit -m “your content”简写：svn c">
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/09/22/Android-EditText属性大全.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            git-命令行常用命令集锦(持续更新)
+            Android-EditText属性大全
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
-    
-        <a href="/blog/2016/09/26/css-元素垂直居中的6种方法/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">css-元素垂直居中的6种方法</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
     
 </nav>
 
@@ -424,7 +375,7 @@ svn commit -m “your content”简写：svn c">
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -433,7 +384,7 @@ svn commit -m “your content”简写：svn c">
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -442,7 +393,7 @@ svn commit -m “your content”简写：svn c">
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -451,7 +402,7 @@ svn commit -m “your content”简写：svn c">
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -460,7 +411,7 @@ svn commit -m “your content”简写：svn c">
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -552,7 +503,7 @@ svn commit -m “your content”简写：svn c">
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/26/svn-命令行常用命令集锦-持续更新/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式.html';
     
     (function() {
     var dsq = document.createElement('script');

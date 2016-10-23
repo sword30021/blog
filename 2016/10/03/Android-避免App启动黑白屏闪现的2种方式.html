@@ -3,69 +3,33 @@
 <head>
     <meta charset="utf-8">
     
-    <title>常用正则表达式收集(持续更新) | 自由的程序员</title>
+    <title>Android-避免App启动黑白屏闪现的2种方式 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Regex" />
+        <meta name="keywords" content="Android" />
     
-    <meta name="description" content="1、校验密码强度
+    <meta name="description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
 
-密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。
-^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+1、自定义Theme
 
-2、校验中文
-
-字符串仅能是中文。
-^[\\u4e00-\\u9fa5]{0,}$
-
-3、由数组、26个英文字母或下划线组成的字符串
-
-^\\w+$
-
-4、校验e-mail地址
-
-[\\w!#$%&amp;amp;&amp;a">
+&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用正则表达式收集(持续更新)">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/03/常用正则表达式收集-持续更新/index.html">
+<meta property="og:title" content="Android-避免App启动黑白屏闪现的2种方式">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="1、校验密码强度
+<meta property="og:description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
 
-密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。
-^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+1、自定义Theme
 
-2、校验中文
-
-字符串仅能是中文。
-^[\\u4e00-\\u9fa5]{0,}$
-
-3、由数组、26个英文字母或下划线组成的字符串
-
-^\\w+$
-
-4、校验e-mail地址
-
-[\\w!#$%&amp;amp;&amp;a">
-<meta property="og:updated_time" content="2016-10-03T06:22:35.000Z">
+&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
+<meta property="og:updated_time" content="2016-10-03T06:19:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用正则表达式收集(持续更新)">
-<meta name="twitter:description" content="1、校验密码强度
+<meta name="twitter:title" content="Android-避免App启动黑白屏闪现的2种方式">
+<meta name="twitter:description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
 
-密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。
-^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+1、自定义Theme
 
-2、校验中文
-
-字符串仅能是中文。
-^[\\u4e00-\\u9fa5]{0,}$
-
-3、由数组、26个英文字母或下划线组成的字符串
-
-^\\w+$
-
-4、校验e-mail地址
-
-[\\w!#$%&amp;amp;&amp;a">
+&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
     
 
     
@@ -174,18 +138,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/其它/">其它</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/其它/正则表达式/">正则表达式</a>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Other/">Other</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-常用正则表达式收集-持续更新" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-避免App启动黑白屏闪现的2种方式" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        常用正则表达式收集(持续更新)
+        Android-避免App启动黑白屏闪现的2种方式
         </h1>
     
 
@@ -193,127 +157,39 @@
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/10/03/常用正则表达式收集-持续更新/" class="article-date">
-    <time datetime="2016-10-03T03:23:31.000Z" itemprop="datePublished">2016-10-03</time>
+                <a href="/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式.html" class="article-date">
+    <time datetime="2016-10-03T06:16:53.000Z" itemprop="datePublished">2016-10-03</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Regex/">Regex</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <blockquote>
-<p>1、校验密码强度</p>
-</blockquote>
-<p>密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</p>
-<pre><code>^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
-</code></pre><blockquote>
-<p>2、校验中文</p>
-</blockquote>
-<p>字符串仅能是中文。</p>
-<pre><code>^[\\u4e00-\\u9fa5]{0,}$
-</code></pre><blockquote>
-<p>3、由数组、26个英文字母或下划线组成的字符串</p>
-</blockquote>
-<pre><code>^\\w+$
-</code></pre><blockquote>
-<p>4、校验e-mail地址</p>
-</blockquote>
-<pre><code>[\\w!#$%&amp;&apos;*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&amp;&apos;*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?
-</code></pre><blockquote>
-<p>5、校验身份证号码</p>
-</blockquote>
-<p>15位：</p>
-<pre><code>^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$
-</code></pre><p>18位：</p>
-<pre><code>^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$
-</code></pre><blockquote>
-<p>6、校验日期</p>
-</blockquote>
-<p>“yyyy-mm-dd“ 格式的日期校验，已考虑平闰年。</p>
-<pre><code>^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$
-</code></pre><blockquote>
-<p>7、校验金额</p>
-</blockquote>
-<p>金额校验，精确到2位小数。</p>
-<pre><code>^[0-9]+(.[0-9]{2})?$
-</code></pre><blockquote>
-<p>8、校验手机号</p>
-</blockquote>
-<p>下面是国内 13、15、18开头的手机号正则表达式。（可根据目前国内收集号扩展前两位开头号码）</p>
-<pre><code>^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$
-</code></pre><blockquote>
-<p>9、判断IE的版本</p>
-</blockquote>
-<p>IE目前还没被完全取代，很多页面还是需要做版本兼容，下面是IE版本检查的表达式。</p>
-<pre><code>^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$
-</code></pre><blockquote>
-<p>10、校验IP地址</p>
-</blockquote>
-<p>IP4 正则语句:</p>
-<pre><code>\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b
-</code></pre><p>IP6 正则语句:</p>
-<pre><code>(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))
-</code></pre><blockquote>
-<p>11、检查URL的前缀</p>
-</blockquote>
-<p>应用开发中很多时候需要区分请求是HTTPS还是HTTP，通过下面的表达式可以取出一个url的前缀然后再逻辑判断。</p>
-<pre><code>if (!s.match(/^[a-zA-Z]+:\\/\\//)){ s = &apos;http://&apos; + s;}
-</code></pre><blockquote>
-<p>12、提取URL链接</p>
-</blockquote>
-<p>下面的这个表达式可以筛选出一段文本中的URL。</p>
-<pre><code>^(f|ht){1}(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?
-</code></pre><blockquote>
-<p>13、文件路径及扩展名校验</p>
-</blockquote>
-<p>验证windows下文件路径和扩展名（下面的例子中为.txt文件）</p>
-<p>   ^([a-zA-Z]\:|\\)\\([^\\]+\\)<em>[^\/:</em>?”&lt;&gt;|]+\.txt(l)?$</p>
+            <p>App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。</p>
 <blockquote>
-<p>14、提取Color Hex Codes</p>
+<p>1、自定义Theme</p>
 </blockquote>
-<p>有时需要抽取网页中的颜色代码，可以使用下面的表达式。</p>
-<pre><code>^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$
+<pre><code>&lt;style name=&quot;Theme.AppStartLoad&quot; parent=&quot;android:Theme&quot;&gt;    
+    &lt;item name=&quot;android:windowBackground&quot;&gt;@drawable/ic_splash&lt;/item&gt;    
+    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;    
+&lt;/style&gt; 
 </code></pre><blockquote>
-<p>15、提取网页图片</p>
+<p>2、设置透明Theme</p>
 </blockquote>
-<p>假若你想提取网页中所有图片信息，可以利用下面的表达式。</p>
-<pre><code>\\&lt; *[img][^\\&gt;]*[src] *= *[\\&quot;\\&apos;]{0,1}([^\\&quot;\\&apos;\\ &gt;]*)
-</code></pre><blockquote>
-<p>16、提取页面超链接</p>
-</blockquote>
-<p>提取html中的超链接。</p>
-<pre><code>(&lt;a\\s*(?!.*\\brel=)[^&gt;]*)(href=&quot;https?:\\/\\/)((?!(?:(?:www\\.)?&apos;.implode(&apos;|(?:www\\.)?&apos;, $follow_list).&apos;))[^&quot;]+)&quot;((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;
-</code></pre><blockquote>
-<p>17、查找CSS属性</p>
-</blockquote>
-<p>通过下面的表达式，可以搜索到相匹配的CSS属性。</p>
-<pre><code>^\\s*[a-zA-Z\\-]+\\s*[:]{1}\\s[a-zA-Z0-9\\s.#]+[;]{1}
-</code></pre><blockquote>
-<p>18、抽取注释</p>
-</blockquote>
-<p>如果你需要移除HMTL中的注释，可以使用如下的表达式。</p>
-<pre><code>&lt;!--(.*?)--&gt;
-</code></pre><blockquote>
-<p>19、匹配HTML标签</p>
-</blockquote>
-<p>通过下面的表达式可以匹配出HTML中的标签属性。</p>
-<pre><code>&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:&quot;.*?&quot;|&apos;.*?&apos;|[\\^&apos;&quot;&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;
-</code></pre><blockquote>
-<p>Ps：参考资料</p>
-</blockquote>
-<ol>
-<li><a href="http://blog.csdn.net/sefvang/article/details/8270553" target="_blank" rel="external">正则表达式 匹配中文，英文字母和数字及_的写法！同时控制长度</a></li>
-</ol>
-
+<pre><code>&lt;style name=&quot;Theme.AppStartLoadTranslucent&quot; parent=&quot;android:Theme&quot;&gt;    
+    &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;   
+    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;    
+&lt;/style&gt; 
+</code></pre>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/10/03/常用正则表达式收集-持续更新/" data-id="ciu4t967p001b3b8sqn7ni5mq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式.html" data-id="cium2vw9t000j0n8svlyri8ut" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -449,20 +325,20 @@
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Android-避免App启动黑白屏闪现的2种方式
+            Android-adb常用命令整理(持续更新)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/2016/10/03/常用正则表达式收集-持续更新.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Android Studio配置正式签名和debug签名</p>
+        <p class="article-nav-title">常用正则表达式收集(持续更新)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -482,7 +358,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -491,7 +367,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -500,7 +376,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -509,7 +385,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -518,7 +394,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -610,7 +486,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/03/常用正则表达式收集-持续更新/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式.html';
     
     (function() {
     var dsq = document.createElement('script');

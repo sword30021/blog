@@ -3,33 +3,42 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Android-避免App启动黑白屏闪现的2种方式 | 自由的程序员</title>
+    <title>Android-Touch事件处理机制，解决滑动时间冲突 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android" />
+        <meta name="keywords" content="Android,Android_touch" />
     
-    <meta name="description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
+    <meta name="description" content="Android系统中的每个View的子类都具有下面三个和TouchEvent处理密切相关的方法：
 
-1、自定义Theme
 
-&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
+public boolean dispatchTouchEvent(MotionEvent ev)这个方法用来分发TouchEvent
+
+public boolean onInterceptTouchEvent(MotionEvent ev)这个方法用来拦截TouchEvent
+
+public">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android-避免App启动黑白屏闪现的2种方式">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/index.html">
+<meta property="og:title" content="Android-Touch事件处理机制，解决滑动时间冲突">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
+<meta property="og:description" content="Android系统中的每个View的子类都具有下面三个和TouchEvent处理密切相关的方法：
 
-1、自定义Theme
 
-&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
-<meta property="og:updated_time" content="2016-10-03T06:19:36.000Z">
+public boolean dispatchTouchEvent(MotionEvent ev)这个方法用来分发TouchEvent
+
+public boolean onInterceptTouchEvent(MotionEvent ev)这个方法用来拦截TouchEvent
+
+public">
+<meta property="og:updated_time" content="2016-10-05T07:21:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android-避免App启动黑白屏闪现的2种方式">
-<meta name="twitter:description" content="App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。
+<meta name="twitter:title" content="Android-Touch事件处理机制，解决滑动时间冲突">
+<meta name="twitter:description" content="Android系统中的每个View的子类都具有下面三个和TouchEvent处理密切相关的方法：
 
-1、自定义Theme
 
-&amp;lt;style name=&amp;quot;Theme.AppStartLoad&amp;quot;">
+public boolean dispatchTouchEvent(MotionEvent ev)这个方法用来分发TouchEvent
+
+public boolean onInterceptTouchEvent(MotionEvent ev)这个方法用来拦截TouchEvent
+
+public">
     
 
     
@@ -142,14 +151,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Android-避免App启动黑白屏闪现的2种方式" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-Touch事件处理机制，解决滑动时间冲突" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Android-避免App启动黑白屏闪现的2种方式
+        Android-Touch事件处理机制，解决滑动时间冲突
         </h1>
     
 
@@ -157,39 +166,46 @@
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/" class="article-date">
-    <time datetime="2016-10-03T06:16:53.000Z" itemprop="datePublished">2016-10-03</time>
+                <a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="article-date">
+    <time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-touch/">Android_touch</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>App每次启动程序都会闪一下黑屏或白屏(取决于使用的全局样式)，因为启动Activity的时候，需要执行完onCreate和onResume才会显示界面。也就是说需要处理一些数据后，才会显示，就算onCreate方法里什么不做，仍然会闪一下黑屏，因为初始化解析界面时需要一定时间。</p>
-<blockquote>
-<p>1、自定义Theme</p>
+            <blockquote>
+<p>Android系统中的每个View的子类都具有下面三个和TouchEvent处理密切相关的方法：</p>
 </blockquote>
-<pre><code>&lt;style name=&quot;Theme.AppStartLoad&quot; parent=&quot;android:Theme&quot;&gt;    
-    &lt;item name=&quot;android:windowBackground&quot;&gt;@drawable/ic_splash&lt;/item&gt;    
-    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;    
-&lt;/style&gt; 
+<ol>
+<li><p>public boolean dispatchTouchEvent(MotionEvent ev)<br>这个方法用来分发TouchEvent</p>
+</li>
+<li><p>public boolean onInterceptTouchEvent(MotionEvent ev)<br>这个方法用来拦截TouchEvent</p>
+</li>
+<li><p>public boolean onTouchEvent(MotionEvent ev)<br>这个方法用来处理TouchEvent</p>
+</li>
+</ol>
+<p>当TouchEvent发生时，首先Activity将TouchEvent传递给最顶层的View， TouchEvent最先到达最顶层 view 的 dispatchTouchEvent ，然后由  dispatchTouchEvent 方法进行分发，如果dispatchTouchEvent返回true ，则交给这个view的onTouchEvent处理，如果dispatchTouchEvent返回 false ，则交给这个 view 的 interceptTouchEvent 方法来决定是否要拦截这个事件，如果 interceptTouchEvent 返回 true ，也就是拦截掉了，则交给它的 onTouchEvent 来处理，如果 interceptTouchEvent 返回 false ，那么就传递给子 view ，由子 view 的 dispatchTouchEvent 再来开始这个事件的分发。如果事件传递到某一层的子 view 的 onTouchEvent 上了，这个方法返回了 false ，那么这个事件会从这个 view 往上传递，都是 onTouchEvent 来接收。而如果传递到最上面的 onTouchEvent 也返回 false 的话，这个事件就会“消失”，而且接收不到下一次事件。</p>
+<p>让子先处理的方法是从写父的onInterceptTouchEvent事件并返回false</p>
+<pre><code> public boolean onInterceptTouchEvent(MotionEvent ev) {        
+    return false;   
+}
 </code></pre><blockquote>
-<p>2、设置透明Theme</p>
+<p>Ps：参考资料</p>
 </blockquote>
-<pre><code>&lt;style name=&quot;Theme.AppStartLoadTranslucent&quot; parent=&quot;android:Theme&quot;&gt;    
-    &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;   
-    &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;    
-&lt;/style&gt; 
-</code></pre>
+<ol>
+<li><a href="http://www.cnblogs.com/punkisnotdead/p/5179115.html" target="_blank" rel="external">Android View事件机制 21问21答</a></li>
+</ol>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/" data-id="ciu4t966c000j3b8sd1xsmugj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" data-id="cium2vw8u00060n8s874atm4y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -325,20 +341,20 @@
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Android-adb常用命令整理(持续更新)
+            Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/blog/2016/10/03/常用正则表达式收集-持续更新/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">常用正则表达式收集(持续更新)</p>
+        <p class="article-nav-title">Android-string.xml动态替换文本</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -358,7 +374,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -367,7 +383,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -376,7 +392,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -385,7 +401,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -394,7 +410,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -486,7 +502,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html';
     
     (function() {
     var dsq = document.createElement('script');

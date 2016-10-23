@@ -3,45 +3,41 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Android-res/raw/assets存放资源的限制和读取方式 | 自由的程序员</title>
+    <title>Android Studio常用插件列表(持续更新...) | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android,Android_Resource" />
+        <meta name="keywords" content="Android,Android_tools" />
     
-    <meta name="description" content="res/raw和assets的相同点
+    <meta name="description" content="引言
 
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
+工欲善其事，必先利其器！作为一名苦逼的程序员，提高开发效率，可以使用节约的时间做其他事情。
 
-res/raw和assets的不同点
+1、.ignore
 
-
-res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
-res/raw文件下不可">
+在Git 中想要过滤掉一些不想提交的文件，可以把相应的文件添加到.gitignore 中，而.gitignore 这个Android Studio 插件根据不同的语言来选择模板，就不用自己在费事添加一些文件了，而且还有自动补全功能，过滤文件再也不要复制文件名了。没有igno">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android-res/raw/assets存放资源的限制和读取方式">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/index.html">
+<meta property="og:title" content="Android Studio常用插件列表(持续更新...)">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-Studio常用插件列表-持续更新.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="res/raw和assets的相同点
+<meta property="og:description" content="引言
 
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
+工欲善其事，必先利其器！作为一名苦逼的程序员，提高开发效率，可以使用节约的时间做其他事情。
 
-res/raw和assets的不同点
+1、.ignore
 
-
-res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
-res/raw文件下不可">
-<meta property="og:updated_time" content="2016-09-22T08:07:04.000Z">
+在Git 中想要过滤掉一些不想提交的文件，可以把相应的文件添加到.gitignore 中，而.gitignore 这个Android Studio 插件根据不同的语言来选择模板，就不用自己在费事添加一些文件了，而且还有自动补全功能，过滤文件再也不要复制文件名了。没有igno">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1980884-1d11c83f42600731.jpg?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2016-10-05T03:39:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android-res/raw/assets存放资源的限制和读取方式">
-<meta name="twitter:description" content="res/raw和assets的相同点
+<meta name="twitter:title" content="Android Studio常用插件列表(持续更新...)">
+<meta name="twitter:description" content="引言
 
-两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。
+工欲善其事，必先利其器！作为一名苦逼的程序员，提高开发效率，可以使用节约的时间做其他事情。
 
-res/raw和assets的不同点
+1、.ignore
 
-
-res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。
-res/raw文件下不可">
+在Git 中想要过滤掉一些不想提交的文件，可以把相应的文件添加到.gitignore 中，而.gitignore 这个Android Studio 插件根据不同的语言来选择模板，就不用自己在费事添加一些文件了，而且还有自动补全功能，过滤文件再也不要复制文件名了。没有igno">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1980884-1d11c83f42600731.jpg?imageMogr2/auto-orient/strip">
     
 
     
@@ -150,18 +146,18 @@ res/raw文件下不可">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Other/">Other</a>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/">开发工具</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/Android-Studio/">Android Studio</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Android-res-raw-assets存放资源的限制和读取方式" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-Studio常用插件列表-持续更新" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Android-res/raw/assets存放资源的限制和读取方式
+        Android Studio常用插件列表(持续更新...)
         </h1>
     
 
@@ -169,42 +165,94 @@ res/raw文件下不可">
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/" class="article-date">
-    <time datetime="2016-09-22T06:15:02.000Z" itemprop="datePublished">2016-09-22</time>
+                <a href="/blog/2016/09/22/Android-Studio常用插件列表-持续更新.html" class="article-date">
+    <time datetime="2016-09-22T08:03:39.000Z" itemprop="datePublished">2016-09-22</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-Resource/">Android_Resource</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-tools/">Android_tools</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
-<p>res/raw和assets的相同点</p>
+<p>引言</p>
 </blockquote>
-<p>两者目录下的文件在打包后会原封不动的保存在apk包中，不会被编译成二进制文件。</p>
+<p>工欲善其事，必先利其器！作为一名苦逼的程序员，提高开发效率，可以使用节约的时间做其他事情。</p>
 <blockquote>
-<p>res/raw和assets的不同点</p>
+<p>1、.ignore</p>
 </blockquote>
-<ol>
-<li>res/raw中的文件会被映射到R.java文件中，访问的时候直接使用资源ID即R.id.filename；assets文件夹下的文件不会被映射到R.java中，访问的时候需要使用AssetManager类。</li>
-<li>res/raw文件下不可以新建目录结构，而assets则可以自定义目录结构，也就是assets目录下可以再建立文件夹。</li>
-</ol>
+<p>在Git 中想要过滤掉一些不想提交的文件，可以把相应的文件添加到.gitignore 中，而.gitignore 这个Android Studio 插件根据不同的语言来选择模板，就不用自己在费事添加一些文件了，而且还有自动补全功能，过滤文件再也不要复制文件名了。没有ignore file 可以右键项目New 出自动生成上面模板的 ignore file，已有ignore file 的话可以右键文件选择Add template…，也可以右键将向忽略的文件直接添加到ignore file 里。</p>
 <blockquote>
-<p>读取文件资源</p>
+<p>2、Android ButterKnife Zelezny</p>
 </blockquote>
-<p>1.读取res/raw下的文件资源，通过以下方式获取输入流来进行写操作:</p>
-<pre><code>InputStream is = getResources().openRawResource(R.id.filename); 
-</code></pre><p>2.读取assets下的文件资源，通过以下方式获取输入流来进行写操作:</p>
-<pre><code>AssetManager am = null ;
-am = getAssets();
-InputStream is = am.open(&quot;filename&quot;);
-</code></pre><p>3.获取assets下的文件列表</p>
-<pre><code>String[] files = getAssets().list(&quot;&quot;);
-</code></pre><blockquote>
-<p>Android 对asset与raw的限制</p>
+<p>ButterKnife是一个专注于Android系统的View注入框架,可以减少大量的findViewById以及 setOnClickListener代码，可视化一键生成。<br><img src="http://upload-images.jianshu.io/upload_images/1980884-1d11c83f42600731.jpg?imageMogr2/auto-orient/strip" alt="2、Android ButterKnife Zelezny"></p>
+<blockquote>
+<p>3、Android Parcelable code generator</p>
 </blockquote>
-<p>在读取这两个资源文件夹中的文件时会有一定的限制，即单个文件大小不能超过1M ，如果读取超过1M的文件会报 “Data exceeds UNCOMPRESS_DATA_MAX (1314625 vs 1048576)” 的IOException。</p>
+<p>快速实现Parcelable接口的插件。<br><img src="http://upload-images.jianshu.io/upload_images/1980884-371657979c333412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3、Android Parcelable code generator"></p>
+<blockquote>
+<p>4、Android Postfix Completion</p>
+</blockquote>
+<p>可根据后缀快速完成代码。<br><img src="http://upload-images.jianshu.io/upload_images/1980884-11bfff9ee83283d4.jpg?imageMogr2/auto-orient/strip" alt="4、Android Postfix Completion"></p>
+<blockquote>
+<p>5、Codota</p>
+</blockquote>
+<p>该网站搜集了大量的代码，号称超过700W的代码实例。提供了chrome和as插件。</p>
+<blockquote>
+<p>6、Dash</p>
+</blockquote>
+<p>Dash是一个API文档浏览器（ API Documentation Browser），以及代码片段管理工具（Code Snippet Manager）。安装此插件后，可以打开Dash客户端，如果Dash里多个API文档，默认打开Android。很多IDE都支持Dash，只要安装相应的插件即可。<br><img src="http://upload-images.jianshu.io/upload_images/1980884-e00f64f8492509e8.gif?imageMogr2/auto-orient/strip" alt="6、Dash"></p>
+<blockquote>
+<p>7、DataBase Navigator</p>
+</blockquote>
+<p>轻量级的，在Android Studio中使用的数据库可视化插件。<br><img src="https://plugins.jetbrains.com/oldimg/screenshots/Database_Navigator_(for_Oracle" alt="7、DataBase Navigator">_573.jpg)</p>
+<blockquote>
+<p>8、GsonFormat</p>
+</blockquote>
+<p>GsonFormat是一个快速格式化json数据,自动生成实体类参数的插件。<br><img src="http://upload-images.jianshu.io/upload_images/1980884-1d109d47fb840e9a.png?imageMogr2/auto-orient/strip" alt="8、GsonFormat"></p>
+<blockquote>
+<p>9、Lifecycle Sorter</p>
+</blockquote>
+<p>可以根据Activity或者fragment的生命周期对其生命周期方法位置进行先后排序。<br><img src="http://upload-images.jianshu.io/upload_images/1980884-4a0abdfd44d07711.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9、Lifecycle Sorter"></p>
+<blockquote>
+<p>10、Markdown</p>
+</blockquote>
+<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<blockquote>
+<p>11、 Android Drawable Importer</p>
+</blockquote>
+<p>为了适应所有Android屏幕的大小和密度，每个Android项目都会包含drawable文件夹。任何具备Android开发经验的开发人员都知道，为了支持所有的屏幕尺寸，你必须给每个屏幕类型导入不同的画板。Android Drawable Importer插件能让这项工作变得更容易。它可以减少导入缩放图像到Android项目所需的工作量。Android Drawable Importer添加了一个在不同分辨率导入画板或缩放指定图像到定义分辨率的选项。这个插件加速了开发人员的画板工作。</p>
+<p>参考使用地址：<a href="http://blog.csdn.net/ziwang_/article/details/51713623" target="_blank" rel="external">http://blog.csdn.net/ziwang_/article/details/51713623</a></p>
+<blockquote>
+<p>12、Material Design Icon Generator</p>
+</blockquote>
+<p>一款帮助我们设置Material风格图标的插件</p>
+<blockquote>
+<p>13、SelectorChapek for Android</p>
+</blockquote>
+<p>根据资源自动生成相应的selector。</p>
+<blockquote>
+<p>14、JavaDoc</p>
+</blockquote>
+<p>添加注释，可自定义模板。</p>
+<blockquote>
+<p>15、Android Holo Colors Generator</p>
+</blockquote>
+<p>通过自定义Holo主题颜色生成对应的Drawable和布局文件</p>
+<blockquote>
+<p>16、Android strings.xml tools</p>
+</blockquote>
+<p>可以用来管理Android项目中的字符串资源。它提供了排序Android本地文件和添加缺少的字符串的基本操作。虽然这个插件是有限制的，但如果应用程序有大量的字符串资源，那这个插件就非常有用了。</p>
+<blockquote>
+<p>17、lint-cleaner-plugin</p>
+</blockquote>
+<p>删除未使用的资源,包括String字符串,颜色和尺寸。 这是一个Gradle插件，所以如何配置可以去github的源码上看。<br>插件源码地址：<a href="https://github.com/marcoRS/lint-cleaner-plugin" target="_blank" rel="external">https://github.com/marcoRS/lint-cleaner-plugin</a></p>
+<blockquote>
+<p>18、 Material Theme UI</p>
+</blockquote>
+<p> This will add the Material Theme look to your IDE.</p>
+<p><img src="http://oc3c5vrl3.bkt.clouddn.com/Android%20Studio%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%88%97%E8%A1%A8%28%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0...%29_19.png" alt="18、Material Theme UI"></p>
 
         </div>
         <footer class="article-footer">
@@ -212,7 +260,7 @@ InputStream is = am.open(&quot;filename&quot;);
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/" data-id="ciu4t965k00063b8stelsgjf0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-Studio常用插件列表-持续更新.html" data-id="cium2vw8e00010n8s6q3j7r5p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -348,16 +396,22 @@ InputStream is = am.open(&quot;filename&quot;);
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/09/22/Android-EditText属性大全/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/09/22/css-如何规定某一元素高度等于其宽度.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Android-EditText属性大全
+            css-如何规定某一元素高度等于其宽度
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
+    
+        <a href="/blog/2016/09/22/Android-使用Intent打开各种文件.html" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Android-使用Intent打开各种文件</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -375,7 +429,7 @@ InputStream is = am.open(&quot;filename&quot;);
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -384,7 +438,7 @@ InputStream is = am.open(&quot;filename&quot;);
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -393,7 +447,7 @@ InputStream is = am.open(&quot;filename&quot;);
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -402,7 +456,7 @@ InputStream is = am.open(&quot;filename&quot;);
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -411,7 +465,7 @@ InputStream is = am.open(&quot;filename&quot;);
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -503,7 +557,7 @@ InputStream is = am.open(&quot;filename&quot;);
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Android-res-raw-assets存放资源的限制和读取方式/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Android-Studio常用插件列表-持续更新.html';
     
     (function() {
     var dsq = document.createElement('script');

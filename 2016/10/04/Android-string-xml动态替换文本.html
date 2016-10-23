@@ -3,72 +3,36 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Android-adb常用命令整理(持续更新) | 自由的程序员</title>
+    <title>Android-string.xml动态替换文本 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android,Android_adb" />
+        <meta name="keywords" content="Android,Android_string" />
     
-    <meta name="description" content="1、显示当前连接的设备
+    <meta name="description" content="需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。
 
-$ adb devices
-
-2、如果要对设备进行有特殊权限的操作，就需要有root权限
-
-$ adb root
-
-3、如果要手机上安装apk
-
-$ adb install xxx.apk
-
-4、重新安装某apk
-
-$ adb install -r xxx.apk
-5、卸载某apk
-$ adb uninstall &amp;lt;apk的主包名&amp;gt;
-6、查看手机上运行日志">
+在string.xml中定义：
+&amp;lt;string name=&amp;quot;demo&amp;quot;&amp;gt;我是做%1$s开发的，工作%2$d了。&amp;lt;/string&amp;gt;
+在程序中使用：
+String input = getResources().getString(R.string.demo);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android-adb常用命令整理(持续更新)">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/04/Android-adb常用命令整理-持续更新/index.html">
+<meta property="og:title" content="Android-string.xml动态替换文本">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/10/04/Android-string-xml动态替换文本.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="1、显示当前连接的设备
+<meta property="og:description" content="需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。
 
-$ adb devices
-
-2、如果要对设备进行有特殊权限的操作，就需要有root权限
-
-$ adb root
-
-3、如果要手机上安装apk
-
-$ adb install xxx.apk
-
-4、重新安装某apk
-
-$ adb install -r xxx.apk
-5、卸载某apk
-$ adb uninstall &amp;lt;apk的主包名&amp;gt;
-6、查看手机上运行日志">
-<meta property="og:updated_time" content="2016-10-04T11:47:53.000Z">
+在string.xml中定义：
+&amp;lt;string name=&amp;quot;demo&amp;quot;&amp;gt;我是做%1$s开发的，工作%2$d了。&amp;lt;/string&amp;gt;
+在程序中使用：
+String input = getResources().getString(R.string.demo);">
+<meta property="og:updated_time" content="2016-10-04T15:20:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android-adb常用命令整理(持续更新)">
-<meta name="twitter:description" content="1、显示当前连接的设备
+<meta name="twitter:title" content="Android-string.xml动态替换文本">
+<meta name="twitter:description" content="需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。
 
-$ adb devices
-
-2、如果要对设备进行有特殊权限的操作，就需要有root权限
-
-$ adb root
-
-3、如果要手机上安装apk
-
-$ adb install xxx.apk
-
-4、重新安装某apk
-
-$ adb install -r xxx.apk
-5、卸载某apk
-$ adb uninstall &amp;lt;apk的主包名&amp;gt;
-6、查看手机上运行日志">
+在string.xml中定义：
+&amp;lt;string name=&amp;quot;demo&amp;quot;&amp;gt;我是做%1$s开发的，工作%2$d了。&amp;lt;/string&amp;gt;
+在程序中使用：
+String input = getResources().getString(R.string.demo);">
     
 
     
@@ -181,14 +145,14 @@ $ adb uninstall &amp;lt;apk的主包名&amp;gt;
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Android-adb常用命令整理-持续更新" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-string-xml动态替换文本" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Android-adb常用命令整理(持续更新)
+        Android-string.xml动态替换文本
         </h1>
     
 
@@ -196,86 +160,29 @@ $ adb uninstall &amp;lt;apk的主包名&amp;gt;
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="article-date">
-    <time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time>
+                <a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="article-date">
+    <time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-adb/">Android_adb</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-string/">Android_string</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
-<p>1、显示当前连接的设备</p>
+<p>需求：我是做Android开发的，工作3年了。这段字符串中，Android和3需要动态替换。</p>
 </blockquote>
-<pre><code>$ adb devices
-</code></pre><blockquote>
-<p>2、如果要对设备进行有特殊权限的操作，就需要有root权限</p>
+<p>在string.xml中定义：</p>
+<pre><code>&lt;string name=&quot;demo&quot;&gt;我是做%1$s开发的，工作%2$d了。&lt;/string&gt;
+</code></pre><p>在程序中使用：</p>
+<pre><code>String input = getResources().getString(R.string.demo);
+String ouput = String.format(input, &quot;Android&quot;, 3);
+</code></pre><p>输入出结果：我是做Android开发的，工作3年了。</p>
+<blockquote>
+<p>解释：</p>
 </blockquote>
-<pre><code>$ adb root
-</code></pre><blockquote>
-<p>3、如果要手机上安装apk</p>
-</blockquote>
-<pre><code>$ adb install xxx.apk
-</code></pre><blockquote>
-<p>4、重新安装某apk</p>
-</blockquote>
-<pre><code>$ adb install -r xxx.apk
-</code></pre><p>5、卸载某apk</p>
-<pre><code>$ adb uninstall &lt;apk的主包名&gt;
-</code></pre><p>6、查看手机上运行日志</p>
-<pre><code>$ adb logcat
-</code></pre><p>7、启动activity</p>
-<pre><code>$ adb shell am start PACKAGE_NAME/ACTIVITY_IN_PACKAGE  
-或者
-$ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
-</code></pre><blockquote>
-<p>8、A为手机路径，B为电脑路径，意思为：把文件从手机中复制到电脑上 </p>
-</blockquote>
-<pre><code>$ adb pull 
-</code></pre><blockquote>
-<p>9、A为手机路径，B为电脑路径，意思为：把文件从电脑复制到手机上 </p>
-</blockquote>
-<pre><code>$ adb push 
-</code></pre><blockquote>
-<p>10、进入手机的超级终端Terminal </p>
-</blockquote>
-<pre><code>$ adb shell 
-</code></pre><blockquote>
-<p>11、重新挂载文件系统 </p>
-</blockquote>
-<pre><code>$ adb remount 
-</code></pre><blockquote>
-<p>12、重启手机 </p>
-</blockquote>
-<pre><code>$ adb reboot
-</code></pre><blockquote>
-<p>13、重启到Recovery界面 </p>
-</blockquote>
-<pre><code>$ adb reboot recovery 
-</code></pre><blockquote>
-<p>14、重启到bootloader界面 </p>
-</blockquote>
-<pre><code>$ adb reboot bootloader
-</code></pre><blockquote>
-<p>15、获取设备的序列号</p>
-</blockquote>
-<pre><code>$ adb get-serialno
-</code></pre><blockquote>
-<p>16、查询adb的版本号</p>
-</blockquote>
-<pre><code>$ adb version
-</code></pre><blockquote>
-<p>17、从设备中导出文件</p>
-</blockquote>
-<pre><code>$ adb pull &lt;文件路径&gt; &lt;新生成的文件名&gt;
-</code></pre><blockquote>
-<p>Ps：参考资料</p>
-</blockquote>
-<ol>
-<li><a href="http://blog.csdn.net/niejing654092427/article/details/22927177" target="_blank" rel="external">ADB基本的命令讲解</a></li>
-</ol>
+<p>%1$s：1是指位置1，小写s是指定替换类型为字符串。<br>%2$d：2是指位置2，小写d是指定替换类型为整数。<br>其他的类似，灵活运用即可。</p>
 
         </div>
         <footer class="article-footer">
@@ -283,7 +190,7 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/10/04/Android-adb常用命令整理-持续更新/" data-id="ciu4t965f00053b8s7g8etnht" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/10/04/Android-string-xml动态替换文本.html" data-id="cium2vw9m000d0n8s06v1epun" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -419,20 +326,20 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/10/04/Android-string-xml动态替换文本/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Android-string.xml动态替换文本
+            Android-Touch事件处理机制，解决滑动时间冲突
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/blog/2016/10/03/Android-避免App启动黑白屏闪现的2种方式/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Android-避免App启动黑白屏闪现的2种方式</p>
+        <p class="article-nav-title">Android-adb常用命令整理(持续更新)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -452,7 +359,7 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -461,7 +368,7 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -470,7 +377,7 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -479,7 +386,7 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -488,7 +395,7 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -580,7 +487,7 @@ $ adb shell am start PACKAGE_NAME/FULLY_QUALIFIED_ACTIVITY
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/04/Android-adb常用命令整理-持续更新/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/10/04/Android-string-xml动态替换文本.html';
     
     (function() {
     var dsq = document.createElement('script');

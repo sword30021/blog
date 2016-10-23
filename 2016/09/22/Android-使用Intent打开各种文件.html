@@ -3,36 +3,30 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Android Studio配置正式签名和debug签名 | 自由的程序员</title>
+    <title>Android-使用Intent打开各种文件 | 自由的程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android,Android_tools" />
+        <meta name="keywords" content="Android,Android_Intent" />
     
-    <meta name="description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
+    <meta name="description" content="1、打开Html文件
 
-在主工程(一般都是app)下的build.gradle里，配置2个签名：
-signingConfigs {  
-    release {  
-      keyAlias &amp;apos;###&amp;apos;">
+public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Studio配置正式签名和debug签名">
-<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/30/Android-Studio配置正式签名和debug签名/index.html">
+<meta property="og:title" content="Android-使用Intent打开各种文件">
+<meta property="og:url" content="https://sword30021.github.io/blog/2016/09/22/Android-使用Intent打开各种文件.html">
 <meta property="og:site_name" content="自由的程序员">
-<meta property="og:description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
+<meta property="og:description" content="1、打开Html文件
 
-在主工程(一般都是app)下的build.gradle里，配置2个签名：
-signingConfigs {  
-    release {  
-      keyAlias &amp;apos;###&amp;apos;">
-<meta property="og:updated_time" content="2016-10-02T08:55:14.000Z">
+public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
+<meta property="og:updated_time" content="2016-10-05T07:08:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Studio配置正式签名和debug签名">
-<meta name="twitter:description" content="需求：如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。
+<meta name="twitter:title" content="Android-使用Intent打开各种文件">
+<meta name="twitter:description" content="1、打开Html文件
 
-在主工程(一般都是app)下的build.gradle里，配置2个签名：
-signingConfigs {  
-    release {  
-      keyAlias &amp;apos;###&amp;apos;">
+public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&amp;quot;com.android.htmlfileprovider&amp;quot;).scheme(&amp;quot;content&amp;q">
     
 
     
@@ -141,18 +135,18 @@ signingConfigs {
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/">开发工具</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发工具/Android-Studio/">Android Studio</a>
+    <a class="page-title-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/">开发知识</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/blog/categories/Android/开发知识/Other/">Other</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Android-Studio配置正式签名和debug签名" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Android-使用Intent打开各种文件" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Android Studio配置正式签名和debug签名
+        Android-使用Intent打开各种文件
         </h1>
     
 
@@ -160,69 +154,146 @@ signingConfigs {
         
         
             <div class="article-subtitle">
-                <a href="/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" class="article-date">
-    <time datetime="2016-09-30T09:18:24.000Z" itemprop="datePublished">2016-09-30</time>
+                <a href="/blog/2016/09/22/Android-使用Intent打开各种文件.html" class="article-date">
+    <time datetime="2016-09-22T07:52:08.000Z" itemprop="datePublished">2016-09-22</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-tools/">Android_tools</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Android-Intent/">Android_Intent</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
             <blockquote>
-<p>需求：<br>如果应用中牵扯到第三方平台集成的话，调试是非常讨厌的一件事，因为很多第三方要求正式签名后生成的包才可以正常使用。所以，在debug模式下配置正式签名包，就可以解决问题。</p>
+<p>1、打开Html文件</p>
 </blockquote>
-<p>在主工程(一般都是app)下的build.gradle里，配置2个签名：</p>
-<pre><code>signingConfigs {  
-    release {  
-      keyAlias &apos;###&apos;  
-      keyPassword &apos;******&apos;  
-      storeFile file(&apos;../###.jks&apos;)  
-      storePassword &apos;******&apos;  
-    }  
-    debug {  
-      keyAlias &apos;androiddebugkey&apos;  
-      keyPassword &apos;android&apos;  
-      storeFile file(&apos;./debug.keystore&apos;)  
-      storePassword &apos;android&apos;  
+<pre><code>public static Intent getHtmlFileIntent( String param )  {   
+     Uri uri = Uri.parse(param ).buildUpon().encodedAuthority(&quot;com.android.htmlfileprovider&quot;).scheme(&quot;content&quot;).encodedPath(param ).build();    
+     Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);   
+     intent.setDataAndType(uri, &quot;text/html&quot;);    
+     return intent;  
 }
-buildTypes {       
-    debug {           
-      signingConfig signingConfigs.release       
-    }       
-    release {           
-      signingConfig signingConfigs.release       
+</code></pre><blockquote>
+<p>2、打开图片文件</p>
+</blockquote>
+<pre><code>public static Intent getImageFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;image/*&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>3、打开pdf文件</p>
+</blockquote>
+<pre><code>public static Intent getPdfFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/pdf&quot;);    
+    return intent; 
+}
+</code></pre><blockquote>
+<p>4、打开txt文件</p>
+</blockquote>
+<pre><code>public static Intent getTextFileIntent( String paramString, boolean paramBoolean) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    if (paramBoolean) {      
+        Uri uri1 = Uri.parse(param );      
+        intent.setDataAndType(uri1, &quot;text/plain&quot;);    
     }   
-  }
-</code></pre><p>其中keyAlias是签名的别名，keyPassword是签名密码，storeFile file是签名文件所在文件夹位置，这里是放在和app同级目录下。<br>到这里就可以，但是为了保护签名信息，可以优化处理：<br>在项目根目录下的gradle.properties文件中添加：</p>
-<pre><code>RELEASE_KEY_PASSWORD=****** //签名密码  
-RELEASE_KEY_ALIAS=****** //签名别名  
-RELEASE_STORE_PASSWORD=****** //store密码  
-RELEASE_STORE_FILE=***.jks //签名文件地址 
-</code></pre><p>然后修改之前的配置：</p>
-<pre><code>signingConfigs {  
-    release {  
-        keyAlias RELEASE_KEY_ALIAS  
-        keyPassword RELEASE_KEY_PASSWORD  
-        storeFile file(RELEASE_STORE_FILE)  
-        storePassword RELEASE_STORE_PASSWORD  
+    while (true) {      
+        return intent;      
+        Uri uri2 = Uri.fromFile(new File(param ));     
+        intent.setDataAndType(uri2, &quot;text/plain&quot;);    
     }  
-    config {  
-        keyAlias &apos;androiddebugkey&apos;  
-        keyPassword &apos;android&apos;  
-        storeFile file(&apos;./debug.keystore&apos;)  
-        storePassword &apos;android&apos;  
-    }  
-} 
-</code></pre>
+}
+</code></pre><blockquote>
+<p>5、打开音频文件</p>
+</blockquote>
+<pre><code>public static Intent getAudioFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    
+    intent.putExtra(&quot;oneshot&quot;, 0);    
+    intent.putExtra(&quot;configchange&quot;, 0);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;audio/*&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>6、打开视频文件</p>
+</blockquote>
+<pre><code>public static Intent getVideoFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);    
+    intent.putExtra(&quot;oneshot&quot;, 0);    
+    intent.putExtra(&quot;configchange&quot;, 0);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;video/*&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>7、打开chm文件</p>
+</blockquote>
+<pre><code>public static Intent getChmFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/x-chm&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>8、打开word文件</p>
+</blockquote>
+<pre><code>public static Intent getWordFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/msword&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>9、打开Excel文件</p>
+</blockquote>
+<pre><code>public static Intent getExcelFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/vnd.ms-excel&quot;);    
+    return intent;  
+</code></pre><p>}</p>
+<p>10、打开ppt文件</p>
+<pre><code>public static Intent getPptFileIntent( String param ) {    
+    Intent intent = new Intent(&quot;android.intent.action.VIEW&quot;);    
+    intent.addCategory(&quot;android.intent.category.DEFAULT&quot;);    
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
+    Uri uri = Uri.fromFile(new File(param ));    
+    intent.setDataAndType(uri, &quot;application/vnd.ms-powerpoint&quot;);    
+    return intent;  
+}
+</code></pre><blockquote>
+<p>Ps：参考资料</p>
+</blockquote>
+<ol>
+<li><a href="http://blog.csdn.net/u012702547/article/details/50178429" target="_blank" rel="external">关于Intent的七大属性</a></li>
+<li><a href="http://blog.csdn.net/iispring/article/details/48417779" target="_blank" rel="external">Android中Intent概述及使用</a></li>
+<li><a href="http://blog.csdn.net/sunboy_2050/article/details/8242471" target="_blank" rel="external">Android Intent Action 大全</a></li>
+</ol>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名/" data-id="ciu4t965200013b8so5o4ztn1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://sword30021.github.io/blog/blog/2016/09/22/Android-使用Intent打开各种文件.html" data-id="cium2vw9p000f0n8se41v4xl9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -358,20 +429,20 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
         
 <nav id="article-nav">
     
-        <a href="/blog/2016/10/03/常用正则表达式收集-持续更新/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2016/09/22/Android-Studio常用插件列表-持续更新.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            常用正则表达式收集(持续更新)
+            Android Studio常用插件列表(持续更新...)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/blog/2016/09/26/git-命令行常用命令集锦-持续更新/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/2016/09/22/Android-EditText属性大全.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">git-命令行常用命令集锦(持续更新)</p>
+        <p class="article-nav-title">Android-EditText属性大全</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -391,7 +462,7 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Java/">Java</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Java/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式/" class="title">Java-获取当前是星期几的2种方式</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Java-获取当前是星期几的2种方式.html" class="title">Java-获取当前是星期几的2种方式</a></p>
                             <p class="item-date"><time datetime="2016-10-05T03:53:09.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -400,7 +471,7 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新/" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-string-xml中添加特殊字符，ASCII码常用列表-持续更新.html" class="title">Android-string.xml中添加特殊字符，ASCII码常用列表(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-05T02:13:39.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -409,7 +480,7 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突/" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/05/Android-Touch事件处理机制，解决滑动时间冲突.html" class="title">Android-Touch事件处理机制，解决滑动时间冲突</a></p>
                             <p class="item-date"><time datetime="2016-10-05T01:16:05.000Z" itemprop="datePublished">2016-10-05</time></p>
                         </div>
                     </li>
@@ -418,7 +489,7 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本/" class="title">Android-string.xml动态替换文本</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-string-xml动态替换文本.html" class="title">Android-string.xml动态替换文本</a></p>
                             <p class="item-date"><time datetime="2016-10-04T15:19:07.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -427,7 +498,7 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Android/开发知识/">开发知识</a></p>
-                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新/" class="title">Android-adb常用命令整理(持续更新)</a></p>
+                            <p class="item-title"><a href="/blog/2016/10/04/Android-adb常用命令整理-持续更新.html" class="title">Android-adb常用命令整理(持续更新)</a></p>
                             <p class="item-date"><time datetime="2016-10-04T11:46:46.000Z" itemprop="datePublished">2016-10-04</time></p>
                         </div>
                     </li>
@@ -519,7 +590,7 @@ RELEASE_STORE_FILE=***.jks //签名文件地址
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/30/Android-Studio配置正式签名和debug签名/';
+    var disqus_url = 'https://sword30021.github.io/blog/blog/2016/09/22/Android-使用Intent打开各种文件.html';
     
     (function() {
     var dsq = document.createElement('script');
